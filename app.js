@@ -1,8 +1,19 @@
 var express = require('express');
 var app = express();
+var compileSass = require('express-compile-sass');
+var root = process.cwd();
 var projects = require('./modules/project').projects;
 
 app.set('view engine', 'hbs');
+
+app.use(compileSass({
+  root: root,
+  sourceMap: true,
+  sourceComments: true,
+  watchFiles: true,
+  logToConsole: false
+}));
+app.use(express.static(root));
 
 app.get('/', function(req, res) {
   res.render('index', {projects: projects});

@@ -18,6 +18,8 @@
   "homepage": "https://github.com/eglital/assignment_express_portfolio#readme",
   "dependencies": {
     "express": "^4.15.0",
-    "hbs": "^4.0.1"
+    "express-compile-sass": "^3.0.4",
+    "hbs": "^4.0.1",
+    "node-sass": "^4.5.0"
   }
 }

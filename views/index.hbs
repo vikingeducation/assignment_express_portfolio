@@ -1,9 +1,18 @@
-<h1>My Projects</h1>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style/main.scss">
+</head>
+<body>
+  <h1>My Projects</h1>
 
-{{#each projects}}
-<div class="project">
-  <a href="/:{{this.name}}"><h3>{{this.name}}</h3></a>
-  <p>Technologies used: {{this.tech}}</p>
-  <p>Github link: <a href="{{this.link}}" target="_blank">{{this.link}}</a></p>
-</div>
-{{/each}}
+  {{#each projects}}
+  <div class="project">
+    <a href="/:{{this.name}}"><h3>{{this.name}}</h3></a>
+    <p>Technologies used: {{this.tech}}</p>
+    <p>Github link: <a href="{{this.link}}" target="_blank">{{this.link}}</a></p>
+  </div>
+  {{/each}}
+
+</body>
+</html>
