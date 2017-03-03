@@ -1,0 +1,9 @@
+<h1>My Projects</h1>
+
+{{#each projects}}
+<div class="project">
+  <a href="/:{{this.name}}"><h3>{{this.name}}</h3></a>
+  <p>Technologies used: {{this.tech}}</p>
+  <p>Github link: <a href="{{this.link}}" target="_blank">{{this.link}}</a></p>
+</div>
+{{/each}}
