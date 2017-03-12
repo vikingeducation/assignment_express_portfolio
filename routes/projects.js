@@ -4,7 +4,7 @@ var router = express.Router();
 const {projects} = require('../modules/projects');
 
 let getProject = (name) => {
-  projects.find( (project) => {
+  return projects.find( (project) => {
     return project.name.toUpperCase() === name.toUpperCase();
   });
 };
