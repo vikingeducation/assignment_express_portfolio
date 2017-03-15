@@ -1,8 +1,9 @@
-var express = require('express');
-var app = express();
-var compileSass = require('express-compile-sass');
-var root = process.cwd();
-var projects = require('./modules/project').projects;
+const express = require('express');
+const app = express();
+const compileSass = require('express-compile-sass');
+const root = process.cwd();
+const projects = require('./modules/project').projects;
+const port = process.env.PORT || '3000';
 
 app.set('view engine', 'hbs');
 
@@ -35,6 +36,6 @@ app.get('/:name', function(req, res) {
   });
 });
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log('listening to port 3000');
 });
