@@ -2,8 +2,14 @@
 body {
   font-size: 16px;
   font-family: "Open Sans", Arial, sans-serif;
-  background-color: #eee;
+  background-color: #fefefe;
   text-rendering: optimizeLegibility; }
+
+.container {
+  width: 92%; }
+
+h1, h2, h3, h4 {
+  margin: 0 0 10px 0; }
 
 small {
   font-size: 10px;
@@ -24,7 +30,7 @@ main {
 #nav .navbar {
   min-height: 76px;
   background-color: white;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
 #nav #logo {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1.4em;
@@ -34,14 +40,9 @@ main {
 #nav .navbar-brand {
   height: 76px;
   line-height: 46px; }
-  @media screen and (min-width: 768px) {
-    #nav .navbar-brand {
-      margin-left: 40px; } }
 #nav .navbar-toggle {
   margin-top: 17px;
   margin-bottom: 17px; }
-#nav .navbar-right {
-  margin-right: 40px; }
 #nav .navbar-right li a {
   height: 76px;
   line-height: 46px; }
@@ -86,5 +87,17 @@ main {
   margin: auto;
   width: 100%;
   z-index: -1; }
+
+#project .project-blurb {
+  margin-top: 40px; }
+  #project .project-blurb .project-item-header {
+    font-family: "Chivo", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px; }
+  #project .project-blurb p {
+    margin-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */

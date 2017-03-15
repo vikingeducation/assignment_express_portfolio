@@ -1,12 +1,22 @@
-<h1>{{ project.name }}</h1>
-
-<div class="cover-image-container">
-  <img src="{{ project.image }}">
-</div>
-<div>{{ project.desc }}</div>
-<a href="{{ project.url }}">
-  <div>View the app</div>
-</a>
-<a href="{{ project.github }}">
-  <div>Github Repository</div>
-</a>
+<main id="project">
+  <div class="container">
+    <div class="project-blurb row">
+      <div class="col-xs-12 col-sm-7">
+        <h1>{{ project.name }}</h1>
+        <p>{{ project.desc }}</p>
+      </div>
+      <div class="col-xs-12 col-sm-5">
+        <div class="project-item-header">Technologies</div>
+        <p>{{ project.tech }}</p>
+        <div class="project-item-header">Deployed Host</div>
+        <a href="{{ project.url }}">
+          <p>View on {{ project.host }}</p>
+        </a>
+        <div class="project-item-header">GitHub Repo</div>
+        <a href="{{ project.github }}">
+          <p>Source</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
