@@ -1,16 +1,17 @@
 <main id="project">
   <div class="container">
     <div class="project-blurb row">
-      <div class="col-xs-12 col-sm-7">
+      <div class="col-xs-12 col-sm-6">
         <h1>{{ project.name }}</h1>
-        <p>{{ project.desc }}</p>
+        <p class="project-item-header">{{ project.desc }}</p>
+        <p class="spacer">{{ project.descLong }}</p>
       </div>
-      <div class="col-xs-12 col-sm-5">
+      <div class="col-xs-12 col-sm-offset-1 col-sm-5">
         <div class="project-item-header">Technologies</div>
         <p>{{ project.tech }}</p>
-        <div class="project-item-header">Deployed Host</div>
+        <div class="project-item-header">See it Live</div>
         <a href="{{ project.url }}">
-          <p>View on {{ project.host }}</p>
+          <p>Deployed on {{ project.host }}</p>
         </a>
         <div class="project-item-header">GitHub Repo</div>
         <a href="{{ project.github }}">
@@ -18,5 +19,8 @@
         </a>
       </div>
     </div>
+
+    {{> (lookup . 'partial') }}
+
   </div>
 </main>

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Chivo|Source+Code+Pro');
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #fefefe;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  width: 92%;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 10px 0;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+main {
+  margin-top: 76px;
+}
+
+.spacer {
+  margin-top: 20px;
+}
+
+#nav {
+
+  .navbar {
+    min-height: 76px;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+  }
+
+  #logo {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: 1px;
+  }
+
+  .navbar-brand {
+    height: 76px;
+    line-height: 46px;
+  }
+
+  .navbar-toggle {
+    margin-top: 17px;
+    margin-bottom: 17px;
+  }
+
+  .navbar-right li a {
+    height: 76px;
+    line-height: 46px;
+  }
+
+  li {
+    font-family: "Chivo", Arial, sans-serif;
+    font-size: .85em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+}
+
+#code {
+  .project-container {
+    position: relative;
+    width: 100%;
+
+    &:hover .project-overlay {
+      opacity: 0.9;
+    }
+
+    .project-overlay {
+      position: absolute;
+      opacity: 0;
+      text-align: center;
+      background: black;
+      height: 100%;
+      width: 100%;
+      -webkit-transition: opacity 0.25s ease-in-out;
+      transition: opacity .25s ease-in-out;
+    }
+
+    .project-caption {
+      color: white;
+      position: absolute;
+      width: 100%;
+      top: 45%;
+      transform: translateY(-45%);
+      padding: 10px 10px;
+    }
+
+    .project-name {
+      font-size: 1.2em;
+    }
+
+    .project-tech {
+      font-family: "Chivo", Arial, sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+  }
+
+  img {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+#project {
+
+  .project-blurb {
+    margin-top: 40px;
+
+    .project-item-header {
+      font-family: "Chivo", Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 5px 0;
+    }
+
+    p {
+      margin-bottom: 20px;
+      line-height: 1.5em;
+    }
+  }
+
+  .code {
+    font-family: Consolas, "Courier New", Courier, monospace;
+    background-color: #333;
+  }
+}

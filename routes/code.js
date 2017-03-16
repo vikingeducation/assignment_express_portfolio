@@ -17,7 +17,8 @@ router.get('/', function(req, res, next) {
 router.get('/:projectUrl', function(req, res, next) {
   let project = getProject(req.params.projectUrl);
   res.render('project', { title: project.name,
-                          project: project });
+                          project: project,
+                          partial: '_' + project.projectUrl });
 });
 
 module.exports = router;

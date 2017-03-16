@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Chivo|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Chivo|Source+Code+Pro");
 body {
   font-size: 16px;
   font-family: "Open Sans", Arial, sans-serif;
@@ -10,10 +10,6 @@ body {
 
 h1, h2, h3, h4 {
   margin: 0 0 10px 0; }
-
-small {
-  font-size: 10px;
-  font-family: "Chivo", Arial, sans-serif; }
 
 .row.no-gutters {
   margin-right: 0;
@@ -27,25 +23,33 @@ small {
 main {
   margin-top: 76px; }
 
+.spacer {
+  margin-top: 20px; }
+
 #nav .navbar {
   min-height: 76px;
   background-color: white;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+
 #nav #logo {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1.4em;
   font-weight: 600;
   color: #111;
   letter-spacing: 1px; }
+
 #nav .navbar-brand {
   height: 76px;
   line-height: 46px; }
+
 #nav .navbar-toggle {
   margin-top: 17px;
   margin-bottom: 17px; }
+
 #nav .navbar-right li a {
   height: 76px;
   line-height: 46px; }
+
 #nav li {
   font-family: "Chivo", Arial, sans-serif;
   font-size: .85em;
@@ -81,6 +85,7 @@ main {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 10px; }
+
 #code img {
   position: relative;
   display: block;
@@ -96,8 +101,11 @@ main {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 5px; }
+    margin: 5px 0; }
   #project .project-blurb p {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    line-height: 1.5em; }
 
-/*# sourceMappingURL=style.css.map */
+#project .code {
+  font-family: Consolas, "Courier New", Courier, monospace;
+  background-color: #333; }
