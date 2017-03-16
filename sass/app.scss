@@ -5,19 +5,31 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   background-color: #fefefe;
   text-rendering: optimizeLegibility;
-  padding-bottom: 50px;
 }
 
 .container {
   width: 92%;
 }
 
-h1 {
+.container-fluid {
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
   margin: 0 0 15px 0;
 }
 
-h2, h3, h4 {
-  margin: 15px 0 15px 0;
+a.nav-link {
+  font-family: "Chivo", Arial, sans-serif;
+  font-size: .85em;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  &:hover {
+    color: #333;
+  }
 }
 
 h3, h4 {
@@ -49,6 +61,7 @@ main {
 
 pre {
   padding: 15px 15px;
+  margin-bottom: 20px;
 }
 
 code {
@@ -66,6 +79,7 @@ code {
     min-height: 76px;
     background-color: white;
     box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+    opacity: 0.95;
   }
 
   #logo {
@@ -156,16 +170,34 @@ code {
 
 #project {
 
-  .project-blurb {
-    margin-top: 40px;
+  .project-item-header {
+    font-family: "Chivo", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 5px 0;
+  }
 
-    .project-item-header {
-      font-family: "Chivo", Arial, sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 5px 0;
+  .project-blurb {
+    color: #eee;
+    background-color: #555;
+    padding: 50px 0 30px 0;
+
+    h1 {
+      color: #ff7a62;
+    }
+
+    .project-source {
+      color: #9ddbe8;
+    }
+
+    .project-host {
+      color: #e1b3f7;
+    }
+
+    .project-tech {
+      color: #bdf397;
     }
   }
 
@@ -174,30 +206,53 @@ code {
     line-height: 1.5em;
   }
 
-  .project-image-container {
-    margin: 15px 0;
-    max-width: 100%;
+  .project-details {
+    color: #666;
+    font-size: 0.9em;
+
+    .detail {
+      border-top: 1px solid #ddd;
+      padding: 45px 0;
+      width: 100%;
+    }
 
     img {
       max-width: 100%;
+      box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .project-image-container {
+      width: 100%;
+      padding: 30px 30px;
+      background-color: #f5f5f5;
+
+      @media screen and (max-width: 768px) {
+        padding: 0;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      text-indent: -10px;
+      padding: 0;
+      margin: 20px 0;
+
+      li:before {
+        content: "-";
+        margin-right: 5px;
+      }
+
+      li {
+        padding: 5px 0;
+      }
     }
   }
 
-  ul {
-    list-style-position: outside;
-    list-style-type: square;
-    padding: 10px 0 10px 25px;
+  .back-container {
+    text-align: center;
+  }
+
+  .technical ul {
     margin: 0;
-  }
-
-  .technical {
-    color: #eee;
-    margin: 15px -15px 0;
-    padding: 15px 15px;
-    background-color: #333;
-
-    h4 {
-      margin: 5px 0;
-    }
   }
 }
