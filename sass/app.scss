@@ -5,14 +5,23 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   background-color: #fefefe;
   text-rendering: optimizeLegibility;
+  padding-bottom: 50px;
 }
 
 .container {
   width: 92%;
 }
 
-h1, h2, h3, h4 {
-  margin: 0 0 10px 0;
+h1 {
+  margin: 0 0 15px 0;
+}
+
+h2, h3, h4 {
+  margin: 15px 0 15px 0;
+}
+
+h3, h4 {
+  font-weight: 600;
 }
 
 .row.no-gutters {
@@ -31,8 +40,25 @@ main {
 }
 
 .spacer {
-  margin-top: 20px;
+  margin-top: 15px;
 }
+
+.spacer-lg {
+  margin-top: 30px;
+}
+
+pre {
+  padding: 15px 15px;
+}
+
+code {
+  color: #333;
+  border-radius: 0;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  background-color: #ddd;
+}
+
+/* Top Navigation */
 
 #nav {
 
@@ -72,6 +98,8 @@ main {
     letter-spacing: 1.5px;
   }
 }
+
+/* Coding Index */
 
 #code {
   .project-container {
@@ -124,6 +152,8 @@ main {
   }
 }
 
+/* Individual Projects */
+
 #project {
 
   .project-blurb {
@@ -137,15 +167,37 @@ main {
       letter-spacing: 1px;
       margin: 5px 0;
     }
+  }
 
-    p {
-      margin-bottom: 20px;
-      line-height: 1.5em;
+  p {
+    margin-bottom: 20px;
+    line-height: 1.5em;
+  }
+
+  .project-image-container {
+    margin: 15px 0;
+    max-width: 100%;
+
+    img {
+      max-width: 100%;
     }
   }
 
-  .code {
-    font-family: Consolas, "Courier New", Courier, monospace;
+  ul {
+    list-style-position: outside;
+    list-style-type: square;
+    padding: 10px 0 10px 25px;
+    margin: 0;
+  }
+
+  .technical {
+    color: #eee;
+    margin: 15px -15px 0;
+    padding: 15px 15px;
     background-color: #333;
+
+    h4 {
+      margin: 5px 0;
+    }
   }
 }

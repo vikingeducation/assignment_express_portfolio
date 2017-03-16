@@ -37,7 +37,7 @@ const projects =
               "https://github.com/blackwright/tetris"),
 
   new Project("Dune Ipsum",
-              "dune-ipsum",
+              "duneipsum",
               "https://raw.githubusercontent.com/blackwright/dune-ipsum/master/screenshots/cover.jpg",
               "Ruby, Sinatra",
               "A lorem ipsum generator based on Frank Herbert's Dune",

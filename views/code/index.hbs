@@ -1,0 +1,21 @@
+<main id="code">
+  <div class="container-fluid">
+    <div class="row no-gutters">
+    {{#each projects as |project|}}
+      <div class="col-xs-12 col-sm-4">
+        <a href="code/{{ project.projectUrl }}/">
+          <div class="project-container">
+            <div class="project-overlay">
+              <div class="project-caption">
+                <div class="project-name">{{ project.name }}</div>
+                <div class="project-tech">{{ project.tech }}</div>
+              </div>
+            </div>
+            <img src="{{ project.cover }}">
+          </div>
+        </a>
+      </div>
+    {{/each}}
+    </div>
+  </div>
+</main>
