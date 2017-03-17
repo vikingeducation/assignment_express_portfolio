@@ -16,11 +16,13 @@ h1, h2, h3, h4 {
 
 a.nav-link {
   font-family: "Chivo", Arial, sans-serif;
-  font-size: .85em;
+  font-size: 0.9em;
   color: #777;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none; }
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out; }
   a.nav-link:hover {
     color: #333; }
 
@@ -45,16 +47,6 @@ main {
 .spacer-lg {
   margin-top: 30px; }
 
-pre {
-  padding: 15px 15px;
-  margin-bottom: 20px; }
-
-code {
-  color: #333;
-  border-radius: 0;
-  font-family: Consolas, "Courier New", Courier, monospace;
-  background-color: #ddd; }
-
 /* Top Navigation */
 #nav .navbar {
   min-height: 76px;
@@ -62,11 +54,14 @@ code {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   opacity: 0.95; }
 
+#nav .navbar-nav li a {
+  transition: color 0.1s ease-in-out; }
+
 #nav #logo {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1.4em;
   font-weight: 600;
-  color: #111;
+  color: #333;
   letter-spacing: 1px; }
 
 #nav .navbar-brand {
@@ -110,7 +105,7 @@ code {
     transform: translateY(-45%);
     padding: 10px 10px; }
   #code .project-container .project-name {
-    font-size: 1.2em; }
+    font-size: 2em; }
   #code .project-container .project-tech {
     font-family: "Chivo", Arial, sans-serif;
     font-size: 12px;
@@ -159,7 +154,7 @@ code {
     padding: 45px 0;
     width: 100%; }
   #project .project-details img {
-    max-width: 100%;
+    width: 100%;
     box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2); }
   #project .project-details .project-image-container {
     width: 100%;

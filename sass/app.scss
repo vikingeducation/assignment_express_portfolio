@@ -21,11 +21,13 @@ h1, h2, h3, h4 {
 
 a.nav-link {
   font-family: "Chivo", Arial, sans-serif;
-  font-size: .85em;
+  font-size: 0.9em;
   color: #777;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-decoration: none;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
 
   &:hover {
     color: #333;
@@ -59,18 +61,6 @@ main {
   margin-top: 30px;
 }
 
-pre {
-  padding: 15px 15px;
-  margin-bottom: 20px;
-}
-
-code {
-  color: #333;
-  border-radius: 0;
-  font-family: Consolas, "Courier New", Courier, monospace;
-  background-color: #ddd;
-}
-
 /* Top Navigation */
 
 #nav {
@@ -82,11 +72,15 @@ code {
     opacity: 0.95;
   }
 
+  .navbar-nav li a {
+    transition: color 0.1s ease-in-out;
+  }
+
   #logo {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 1.4em;
     font-weight: 600;
-    color: #111;
+    color: #333;
     letter-spacing: 1px;
   }
 
@@ -145,7 +139,7 @@ code {
     }
 
     .project-name {
-      font-size: 1.2em;
+      font-size: 2em;
     }
 
     .project-tech {
@@ -217,7 +211,7 @@ code {
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
     }
 

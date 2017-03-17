@@ -1,0 +1,136 @@
+<section class="detail technical">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-3 col-md-offset-2 col-md-2">
+      <div class="project-item-header">Technical Notes</div>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-2 col-md-2">
+      <ul>
+        <li>File I/O with randomization</li>
+        <li>Ruby classes</li>
+      </ul>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-2 col-md-2">
+      <ul>
+        <li>Media queries</li>
+        <li>ERB partials</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="detail">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-7">
+      <img src="https://raw.githubusercontent.com/blackwright/dune-ipsum/master/screenshots/screenshot1.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="detail">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+      <h4>Core Functionality</h4>
+      <p>The user makes a POST request for one to five paragraphs, for which instances of the Paragraph class are created.</p>
+      <p>Paragraphs are formed from instances of the Sentence class, which in turn uses hardcoded sentence structures to combine instances of the Word class.</p>
+      <p>In the code to the right, the structure "nvran" would create a sentence of noun-verb-article-adjective-noun.</p>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
+      <pre class="language-ruby"><code class="language-ruby">
+class Sentence
+  attr_reader :text
+
+  STRUCTURES = [ "nvcn",
+                 "nvran",
+                 "nvrancnvan",
+                 "rnvpn",
+                 ... ]
+
+  def initialize
+    @text = generate_sentence
+  end
+
+  private
+
+    def generate_sentence
+      structure = STRUCTURES.sample.split(//)
+      sentence = []
+      structure.each do |part_of_speech|
+        word = nil
+        case part_of_speech
+        when "n"
+          word = Word.noun
+        when "r"
+          word = Word.article
+        when "v"
+          word = Word.verb
+        when "p"
+          word = Word.preposition
+        when "c"
+          word = Word.conjunction
+        when "a"
+          word = Word.adjective
+        when ","
+          word = ","
+        end
+        sentence << word
+      end
+      first_word = sentence[0]
+      first_word = first_word[0].upcase + first_word[1..-1]
+      sentence[0] = first_word
+      sentence.join(" ").gsub(" , ", ", ") + ". "
+    end
+end
+      </code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="detail">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+      <h4>Conjunction Junction</h4>
+      <p>The Word class is responsible for randomly pulling a single line from a word list file. Lists are grouped by part of speech.</p>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
+      <pre class="language-ruby"><code class="language-ruby">
+class Word
+
+...
+
+  def self.noun
+    nouns_path = "./lib/words/nouns.txt"
+    random_word(nouns_path)
+  end
+
+  def self.verb
+    verbs_path = "./lib/words/verbs.txt"
+    random_word(verbs_path)
+  end
+
+  private
+
+    def self.random_word(file_path)
+      word = nil
+      File.foreach(file_path).each_with_index do |line, number|
+        word = line if rand < 1.0 / (number + 1)
+      end
+      word.strip
+    end
+end
+      </code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="detail">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+      <p>The "Copy Text" button uses Clipboard.JS to copy all text, while "Other Memory" resubmits a request for the same number of paragraphs.</p>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-3">
+      <div class="project-image-container">
+        <img src="https://raw.githubusercontent.com/blackwright/dune-ipsum/master/screenshots/screenshot2.jpg">
+      </div>
+    </div>
+  </div>
+</section>
