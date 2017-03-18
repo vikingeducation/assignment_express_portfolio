@@ -17,6 +17,7 @@ body {
 
 h1, h2, h3, h4 {
   margin: 0 0 15px 0;
+  line-height: 1.25em;
 }
 
 a.nav-link {
@@ -248,5 +249,10 @@ main {
 
   .technical ul {
     margin: 0;
+  }
+
+  pre code {
+    word-wrap: normal;
+    white-space: pre;
   }
 }

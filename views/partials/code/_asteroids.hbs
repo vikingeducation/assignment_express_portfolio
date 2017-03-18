@@ -1,0 +1,113 @@
+<section class="detail technical">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-3 col-md-offset-2 col-md-2">
+      <div class="project-item-header">Technical Notes</div>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-3 col-md-3">
+      <ul>
+        <li>JavaScript organized with revealing modules and return stub objects in MVC style.</li>
+        <li>Objects inherit properties from a single prototype.</li>
+      </ul>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-3 col-md-3">
+      <ul>
+        <li>Event handlers attached with jQuery.</li>
+        <li>Reset button restarts the game by reinitializing modules.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="detail">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8">
+      <img src="https://raw.githubusercontent.com/blackwright/asteroids/master/screenshots/asteroids1.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="detail">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+      <h4>One Prototype to Rule Them All</h4>
+      <p>All objects in the game inherit from a single MovingObject prototype, which contains data for X and Y location coordinates, X and Y velocities, and methods shared by derived objects.<p>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+      <pre class="language-ruby"><code class="language-ruby">
+function MovingObject(xLoc, yLoc, xVel, yVel) {
+  this.xLoc = xLoc;
+  this.yLoc = yLoc;
+  this.xVel = xVel;
+  this.yVel = yVel;
+
+  this.tic = function() {
+    this.xLoc += this.xVel;
+    this.yLoc += this.yVel;
+  };
+}
+      </code></pre>
+    </div>
+  </div>
+  <div class="row spacer-lg">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+      <h4>The Player Ship</h4>
+      <p>The Ship constructor inherits from MovingObject, adding on a property for the current angle, as well as a boolean for detecting the game over state. </p>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+      <pre class="language-ruby"><code class="language-ruby">
+function Ship() {
+  let loc = config.boardSize / 2;
+  MovingObject.call(this, loc, loc, 0, 0);
+  this.angle = -90;
+  this.alive = true;
+}
+
+Ship.prototype = Object.create(MovingObject.prototype);
+      </code></pre>
+    </div>
+  </div>
+  <div class="row spacer-lg">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+      <h4>Pew Pew</h4>
+      <p>Shots add a counter variable that decreases over time - shots are cleared when the timer expires.</p>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+      <pre class="language-ruby"><code class="language-ruby">
+function Shot(xLoc, yLoc, angle) {
+  let rads = angle * Math.PI / 180;
+  let xVel = config.shotVel * Math.cos(rads);
+  let yVel = config.shotVel * Math.sin(rads);
+  MovingObject.call(this, xLoc, yLoc, xVel, yVel);
+  this.timeLeft = 30;
+}
+
+Shot.prototype = Object.create(MovingObject.prototype);
+      </code></pre>
+    </div>
+  </div>
+  <div class="row spacer-lg">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+      <h4>Space Rocks</h4>
+      <p>Asteroid objects are created with a randomized color tone, in addition to a radius property for rendering and collision detection.</p>
+    </div>
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+      <pre class="language-ruby"><code class="language-ruby">
+function Asteroid(xLoc, yLoc, xVel, yVel, radius) {
+  MovingObject.call(this, xLoc, yLoc, xVel, yVel);
+  this.radius = radius;
+  this.color = _randomAsteroidColor();
+}
+
+Asteroid.prototype = Object.create(MovingObject.prototype);
+      </code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="detail">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8">
+      <img src="https://raw.githubusercontent.com/blackwright/asteroids/master/screenshots/asteroids2.jpg">
+    </div>
+  </div>
+</section>
