@@ -113,14 +113,14 @@ main {
     font-size: 2em; }
 
 /* Coding Index */
-#code .project-tech {
+#code.index .project-tech {
   font-family: "Chivo", Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 10px; }
 
-#code img {
+#code.index img {
   position: relative;
   display: block;
   margin: auto;
@@ -128,11 +128,29 @@ main {
   z-index: -1; }
 
 /* Design Index */
-#design .project-container .design-cover-container {
+#design.index .project-container .design-cover-container {
   width: 100%;
   object-fit: cover; }
-  #design .project-container .design-cover-container img {
+  #design.index .project-container .design-cover-container img {
     width: 100%; }
+
+/* Illustration Index */
+#illo.index .project-container .illo-cover-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden; }
+  #illo.index .project-container .illo-cover-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    width: 100%;
+    height: 500px;
+    object-fit: cover; }
 
 /* Shared Project */
 .project .project-item-header {
@@ -217,3 +235,5 @@ main {
 #design-project .flex-wrap {
   display: flex;
   flex-wrap: wrap; }
+
+/* Illustration Project */
