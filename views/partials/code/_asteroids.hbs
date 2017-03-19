@@ -31,6 +31,7 @@
     <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
       <h4>One Prototype to Rule Them All</h4>
       <p>All objects in the game inherit from a single MovingObject prototype, which contains data for X and Y location coordinates, X and Y velocities, and methods shared by derived objects.<p>
+      <p>The shared tic function takes responsibility for moving objects before each render.</p>
     </div>
     <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
       <pre class="language-ruby"><code class="language-ruby">
@@ -72,7 +73,7 @@ Ship.prototype = Object.create(MovingObject.prototype);
   <div class="row spacer-lg">
     <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
       <h4>Pew Pew</h4>
-      <p>Shot objects have a timeLeft variable that counts down - shots are cleared when this timer expires.</p>
+      <p>Shot objects have a timeLeft variable that counts down with each tic - shots are cleared when this timer expires.</p>
     </div>
     <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
       <pre class="language-ruby"><code class="language-ruby">
