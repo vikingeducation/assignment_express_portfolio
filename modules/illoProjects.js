@@ -14,7 +14,7 @@ const illoProjects =
                   "LI Pulse",
                   "https://s3.amazonaws.com/blackwright/portfolio/illo/mori.jpg"),
 
-  new IlloProject("J and K",
+  new IlloProject("J + K",
                   "jandk",
                   "A Wedding Gift",
                   "https://s3.amazonaws.com/blackwright/portfolio/illo/jandk.jpg"),
@@ -56,7 +56,7 @@ const illoProjects =
 
   new IlloProject("Hush",
                   "hush",
-                  "Thesis",
+                  "Senior Thesis at Mass Art, CMYK Magazine",
                   "https://s3.amazonaws.com/blackwright/portfolio/illo/hush-cover.jpg")
 ];
 
