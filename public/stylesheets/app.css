@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Chivo|Source+Code+Pro");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Chivo");
 body {
   font-size: 16px;
   font-family: "Open Sans", Arial, sans-serif;
@@ -16,7 +16,7 @@ h1, h2, h3, h4 {
   line-height: 1.25em; }
 
 a.nav-link {
-  font-family: "Chivo", Arial, sans-serif;
+  font-family: Chivo, Arial, sans-serif;
   font-size: 0.9em;
   color: #777;
   text-transform: uppercase;
@@ -66,7 +66,7 @@ main {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1.4em;
   font-weight: 600;
-  color: #333;
+  color: #444;
   letter-spacing: 1px; }
 
 #nav .navbar-brand {
@@ -74,15 +74,22 @@ main {
   line-height: 46px; }
 
 #nav .navbar-toggle {
-  margin-top: 17px;
-  margin-bottom: 17px; }
+  margin-top: 22px;
+  margin-bottom: 22px;
+  border: 0; }
+  #nav .navbar-toggle:focus {
+    background-color: #fefefe; }
+  #nav .navbar-toggle:hover, #nav .navbar-toggle:not(.collapsed) {
+    background-color: #ddd; }
+  #nav .navbar-toggle .icon-bar {
+    background-color: #444; }
 
 #nav .navbar-right li a {
   height: 76px;
   line-height: 46px; }
 
 #nav li {
-  font-family: "Chivo", Arial, sans-serif;
+  font-family: Chivo, Arial, sans-serif;
   font-size: .85em;
   text-transform: uppercase;
   letter-spacing: 1.5px; }
@@ -114,7 +121,7 @@ main {
 
 /* Coding Index */
 #code.index .project-tech {
-  font-family: "Chivo", Arial, sans-serif;
+  font-family: Chivo, Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -154,7 +161,7 @@ main {
 
 /* Shared Project */
 .project .project-item-header {
-  font-family: "Chivo", Arial, sans-serif;
+  font-family: Chivo, Arial, sans-serif;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -202,39 +209,39 @@ main {
   text-align: center; }
 
 /* Code Project */
-#code-project.project .project-source {
+#code-project .project-source {
   color: #9ddbe8; }
 
-#code-project.project .project-host {
+#code-project .project-host {
   color: #e1b3f7; }
 
-#code-project.project .project-tech {
+#code-project .project-tech {
   color: #bdf397; }
 
-#code-project.project .technical ul {
+#code-project .technical ul {
   margin: 0; }
 
-#code-project.project pre code {
+#code-project pre code {
   word-wrap: normal;
   white-space: pre; }
 
 /* Design Project */
-#design-project.project .project-blurb {
+#design-project .project-blurb {
   padding: 60px 0 50px 0;
   text-align: center; }
 
-#design-project.project .project-item-header {
+#design-project .project-item-header {
   letter-spacing: 1.5px; }
 
-#design-project.project .project-details img {
+#design-project .project-details img {
   box-shadow: none; }
 
-#design-project.project .flex-wrap {
+#design-project .flex-wrap {
   display: flex;
   flex-wrap: wrap; }
 
 /* Illustration Project */
-#illo-project.project .project-blurb {
+#illo-project .project-blurb {
   color: #555;
   background-color: inherit;
   padding: 60px 0 60px 0; }

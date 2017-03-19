@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Chivo|Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Chivo');
 
 body {
   font-size: 16px;
@@ -21,7 +21,7 @@ h1, h2, h3, h4 {
 }
 
 a.nav-link {
-  font-family: "Chivo", Arial, sans-serif;
+  font-family: Chivo, Arial, sans-serif;
   font-size: 0.9em;
   color: #777;
   text-transform: uppercase;
@@ -89,7 +89,7 @@ main {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 1.4em;
     font-weight: 600;
-    color: #333;
+    color: #444;
     letter-spacing: 1px;
   }
 
@@ -99,8 +99,21 @@ main {
   }
 
   .navbar-toggle {
-    margin-top: 17px;
-    margin-bottom: 17px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    border: 0;
+
+    &:focus {
+      background-color: #fefefe;
+    }
+
+    &:hover, &:not(.collapsed) {
+      background-color: #ddd;
+    }
+
+    .icon-bar {
+      background-color: #444;
+    }
   }
 
   .navbar-right li a {
@@ -109,7 +122,7 @@ main {
   }
 
   li {
-    font-family: "Chivo", Arial, sans-serif;
+    font-family: Chivo, Arial, sans-serif;
     font-size: .85em;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -159,7 +172,7 @@ main {
 #code.index {
 
   .project-tech {
-    font-family: "Chivo", Arial, sans-serif;
+    font-family: Chivo, Arial, sans-serif;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -225,7 +238,7 @@ main {
 .project {
 
   .project-item-header {
-    font-family: "Chivo", Arial, sans-serif;
+    font-family: Chivo, Arial, sans-serif;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
