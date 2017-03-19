@@ -10,7 +10,7 @@ let getProject = (projectUrl) => {
 };
 
 router.get('/', function(req, res, next) {
-  res.render('illo/index', { title: "Blackwright - Code",
+  res.render('illo/index', { title: "Blackwright - Illustration",
                              projects: illoProjects });
 });
 
