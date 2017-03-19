@@ -202,9 +202,6 @@ main {
   text-align: center; }
 
 /* Code Project */
-#code-project.project h1 {
-  color: #ff7a62; }
-
 #code-project.project .project-source {
   color: #9ddbe8; }
 
@@ -239,4 +236,5 @@ main {
 /* Illustration Project */
 #illo-project.project .project-blurb {
   color: #555;
-  background-color: inherit; }
+  background-color: inherit;
+  padding: 60px 0 60px 0; }
