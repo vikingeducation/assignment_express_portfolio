@@ -50,6 +50,9 @@ main {
 .spacer-lg {
   margin-top: 30px; }
 
+span.avoid-wrap {
+  display: inline-block; }
+
 /* Top Navigation */
 #nav .navbar {
   min-height: 76px;

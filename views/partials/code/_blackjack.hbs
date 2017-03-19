@@ -54,7 +54,9 @@
       <p>For this RESTful application, the game state is tracked via browser session variables. Instances of the Hand, Deck, and Bank classes are initialized for each request and then used for game operations.</p>
     </div>
     <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
-      <pre class="language-ruby"><code class="language-ruby">
+      <div class="row">
+        <div class="col-xs-12">
+          <pre class="language-ruby"><code class="language-ruby">
 module SessionsHelper
 
   def load_deck
@@ -69,22 +71,20 @@ module SessionsHelper
     session[:dealer]
   end
 
-  ...
-
-end
-      </code></pre>
-    </div>
-  </div>
-  <div class="row spacer">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-6">
-      <pre class="language-ruby"><code class="language-ruby">
+...
+          </code></pre>
+        </div>
+        <div class="col-xs-12 spacer">
+          <pre class="language-ruby"><code class="language-ruby">
 get '/blackjack' do
   deck = Deck.new(load_deck)
   @dealer = Hand.new(load_dealer)
   @player = Hand.new(load_player)
   erb :blackjack
 end
-      </code></pre>
+          </code></pre>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -107,21 +107,50 @@ end
   <div class="row">
     <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
       <h4>CSS Playing Cards</h4>
-      <p>Each card is represented as an array containing a rank and suit. Each rank has an associated partial used for rendering. The suit and CSS color class are replaced via string substitution.</p>
-      <p>Card styling source: <a href="http://www.brainjar.com/css/cards">http://www.brainjar.com/css/cards</a></p>
+      <p>Each card is represented as an array containing a rank and suit. Each rank has an associated partial used for rendering. These partials have placeholders for the suit and CSS class that are replaced via string substitution.</p>
+      <p>For example, a three of hearts would have a rank of "3" and a suit of <span class="avoid-wrap">"hearts."</span> The app will go looking for a partial called <span class="avoid-wrap">"_3.erb"</span> and replace each instance of the string <span class="avoid-wrap">"&#123;&#123; suit &#125;&#125;"</span> with <span class="avoid-wrap">"&amp;hearts;"</span> - the HTML character code for a heart.</p>
+      <p><span class="avoid-wrap">"&#123;&#123; card class &#125;&#125;"</span> is replaced with "front red," rendering the card face in red.</p>
+      <p>CSS source: <a href="http://www.brainjar.com/css/cards">http://www.brainjar.com/css/cards</a></p>
     </div>
     <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
-      <pre class="language-ruby"><code class="language-ruby">
-def cardify(card)
-  rank = card[0]
-  suit = card[1]
-  if ["diams", "hearts"].include?(suit)
-    (erb :"cards/_#{rank}").gsub("SUIT", "&#{suit};").gsub("front", "front red")
-  else
-    (erb :"cards/_#{rank}").gsub("SUIT", "&#{suit};")
+      <div class="row">
+        <div class="col-xs-12">
+          <pre class="language-html"><code class="language-html">
+_3.erb
+
+&lt;div class="card"&gt;
+  &lt;div class="&#123;&#123; card class &#125;&#125;"&gt;
+    &lt;div class="index"&gt;3&lt;br&gt;&#123;&#123; suit &#125;&#125;&lt;/div&gt;
+    &lt;div class="spotB1"&gt;&#123;&#123; suit &#125;&#125;&lt;/div&gt;
+    &lt;div class="spotB3"&gt;&#123;&#123; suit &#125;&#125;&lt;/div&gt;
+    &lt;div class="spotB5"&gt;&#123;&#123; suit &#125;&#125;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+      </div>
+      <div class="col-xs-12 spacer">
+        <pre class="language-ruby"><code class="language-ruby">
+module BlackjackHelper
+
+  def render_card(rank, suit, card_class)
+    erb(:"cards/_#&#123;rank&#125;", :layout => false)
+      .gsub("&#123;&#123; suit &#125;&#125;", "&amp;#&#123;suit&#125;;")
+      .gsub("&#123;&#123; card class &#125;&#125;", card_class)
   end
-end
-      </code></pre>
+
+  def cardify(card)
+    rank = card[0]
+    suit = card[1]
+    if ["diams", "hearts"].include?(suit)
+      render_card(rank, suit, "front red")
+    else
+      render_card(rank, suit, "front")
+    end
+  end
+
+...
+        </code></pre>
+      </div>
     </div>
   </div>
 </section>
