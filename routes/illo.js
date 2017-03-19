@@ -1,22 +1,22 @@
 var express = require('express');
 var router = express.Router();
 
-const {codeProjects} = require('../modules/codeProjects');
+const {illoProjects} = require('../modules/illoProjects');
 
 let getProject = (projectUrl) => {
-  return codeProjects.find( (project) => {
+  return illoProjects.find( (project) => {
     return project.projectUrl.toUpperCase() === projectUrl.toUpperCase();
   });
 };
 
 router.get('/', function(req, res, next) {
-  res.render('code/index', { title: "Blackwright - Code",
-                             projects: codeProjects });
+  res.render('illo/index', { title: "Blackwright - Code",
+                             projects: illoProjects });
 });
 
 router.get('/:projectUrl', function(req, res, next) {
   let project = getProject(req.params.projectUrl);
-  res.render('code/project', { title: project.name,
+  res.render('illo/project', { title: project.name,
                                project: project,
                                partial: '_' + project.projectUrl });
 });

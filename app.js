@@ -11,12 +11,15 @@ var hbs = require('hbs');
 var index = require('./routes/index');
 var code = require('./routes/code');
 var design = require('./routes/design');
+var illo = require('./routes/illo');
 
 var app = express();
 
 // register partials
 hbs.registerPartials(__dirname + '/views/partials');
 hbs.registerPartials(__dirname + '/views/partials/code');
+hbs.registerPartials(__dirname + '/views/partials/design');
+hbs.registerPartials(__dirname + '/views/partials/illo');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -45,6 +48,7 @@ app.use(express.static( path.join(__dirname, 'public')) );
 app.use('/', index);
 app.use('/code', code);
 app.use('/design', design);
+app.use('/illo', illo);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

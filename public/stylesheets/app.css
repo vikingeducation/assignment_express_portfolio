@@ -26,6 +26,8 @@ a.nav-link {
   transition: color 0.1s ease-in-out; }
   a.nav-link:hover {
     color: #333; }
+  a.nav-link:active {
+    color: #333; }
 
 h3, h4 {
   font-weight: 600; }
@@ -57,6 +59,8 @@ main {
 
 #nav .navbar-nav li a {
   transition: color 0.1s ease-in-out; }
+  #nav .navbar-nav li a:active {
+    color: #333; }
 
 #nav #logo {
   font-family: "Open Sans", Arial, sans-serif;
@@ -83,13 +87,13 @@ main {
   text-transform: uppercase;
   letter-spacing: 1.5px; }
 
-/* Coding Index */
-#code .project-container {
+/* Shared Index */
+.index .project-container {
   position: relative;
   width: 100%; }
-  #code .project-container:hover .project-overlay {
+  .index .project-container:hover .project-overlay {
     opacity: 0.9; }
-  #code .project-container .project-overlay {
+  .index .project-container .project-overlay {
     position: absolute;
     opacity: 0;
     text-align: center;
@@ -98,21 +102,23 @@ main {
     width: 100%;
     -webkit-transition: opacity 0.25s ease-in-out;
     transition: opacity .25s ease-in-out; }
-  #code .project-container .project-caption {
+  .index .project-container .project-caption {
     color: white;
     position: absolute;
     width: 100%;
     top: 45%;
     transform: translateY(-45%);
     padding: 10px 10px; }
-  #code .project-container .project-name {
+  .index .project-container .project-name {
     font-size: 2em; }
-  #code .project-container .project-tech {
-    font-family: "Chivo", Arial, sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 10px; }
+
+/* Coding Index */
+#code .project-tech {
+  font-family: "Chivo", Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px; }
 
 #code img {
   position: relative;
@@ -121,8 +127,15 @@ main {
   width: 100%;
   z-index: -1; }
 
-/* Individual Projects */
-#project .project-item-header {
+/* Design Index */
+#design .project-container .design-cover-container {
+  width: 100%;
+  object-fit: cover; }
+  #design .project-container .design-cover-container img {
+    width: 100%; }
+
+/* Shared Project */
+.project .project-item-header {
   font-family: "Chivo", Arial, sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -130,57 +143,77 @@ main {
   letter-spacing: 1px;
   margin: 5px 0; }
 
-#project .project-blurb {
+.project .project-blurb {
   color: #eee;
   background-color: #555;
   padding: 50px 0 30px 0; }
-  #project .project-blurb h1 {
-    color: #ff7a62; }
-  #project .project-blurb .project-source {
-    color: #9ddbe8; }
-  #project .project-blurb .project-host {
-    color: #e1b3f7; }
-  #project .project-blurb .project-tech {
-    color: #bdf397; }
 
-#project p {
+.project p {
   margin-bottom: 20px;
   line-height: 1.5em; }
 
-#project .project-details {
+.project .project-details {
   color: #666;
   font-size: 0.9em; }
-  #project .project-details .detail {
+  .project .project-details .detail {
     border-top: 1px solid #ddd;
     padding: 45px 0;
     width: 100%; }
-  #project .project-details img {
+  .project .project-details img {
     width: 100%;
     box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2); }
-  #project .project-details .project-image-container {
+  .project .project-details .project-image-container {
     width: 100%;
     padding: 30px 30px;
     background-color: #f5f5f5; }
     @media screen and (max-width: 768px) {
-      #project .project-details .project-image-container {
+      .project .project-details .project-image-container {
         padding: 0; } }
-  #project .project-details ul {
+  .project .project-details ul {
     list-style-type: none;
     text-indent: -10px;
     padding: 0;
     margin: 20px 0; }
-    #project .project-details ul li:before {
+    .project .project-details ul li:before {
       content: "-";
       margin-right: 5px; }
-    #project .project-details ul li {
+    .project .project-details ul li {
       padding: 5px 0; }
 
-#project .back-container {
+.project .back-container {
   text-align: center; }
 
-#project .technical ul {
+/* Code Project */
+#code-project h1 {
+  color: #ff7a62; }
+
+#code-project .project-source {
+  color: #9ddbe8; }
+
+#code-project .project-host {
+  color: #e1b3f7; }
+
+#code-project .project-tech {
+  color: #bdf397; }
+
+#code-project .technical ul {
   margin: 0; }
 
-#project pre code {
+#code-project pre code {
   word-wrap: normal;
   white-space: pre; }
+
+/* Design Project */
+#design-project .project-blurb {
+  padding: 60px 0 50px 0;
+  text-align: center; }
+
+#design-project .project-item-header {
+  letter-spacing: 1.5px; }
+
+#design-project .project-details img {
+  box-shadow: none; }
+
+#design-project .flex-wrap {
+  display: flex;
+  flex-wrap: wrap; }

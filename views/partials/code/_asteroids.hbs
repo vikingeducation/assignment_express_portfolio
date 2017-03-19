@@ -44,6 +44,9 @@ function MovingObject(xLoc, yLoc, xVel, yVel) {
     this.xLoc += this.xVel;
     this.yLoc += this.yVel;
   };
+
+  ...
+
 }
       </code></pre>
     </div>
@@ -69,7 +72,7 @@ Ship.prototype = Object.create(MovingObject.prototype);
   <div class="row spacer-lg">
     <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
       <h4>Pew Pew</h4>
-      <p>Shots add a counter variable that decreases over time - shots are cleared when the timer expires.</p>
+      <p>Shot objects have a timeLeft variable that counts down - shots are cleared when this timer expires.</p>
     </div>
     <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
       <pre class="language-ruby"><code class="language-ruby">

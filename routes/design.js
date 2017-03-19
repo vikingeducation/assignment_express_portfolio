@@ -10,15 +10,15 @@ let getProject = (projectUrl) => {
 };
 
 router.get('/', function(req, res, next) {
-  res.render('design/index', { title: "Projects",
-                       projects: designProjects });
+  res.render('design/index', { title: "Blackwright - Design",
+                               projects: designProjects });
 });
 
 router.get('/:projectUrl', function(req, res, next) {
   let project = getProject(req.params.projectUrl);
   res.render('design/project', { title: project.name,
-                          project: project,
-                          partial: '_' + project.projectUrl });
+                                 project: project,
+                                 partial: '_' + project.projectUrl });
 });
 
 module.exports = router;

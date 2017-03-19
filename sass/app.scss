@@ -33,6 +33,10 @@ a.nav-link {
   &:hover {
     color: #333;
   }
+
+  &:active {
+    color: #333;
+  }
 }
 
 h3, h4 {
@@ -75,6 +79,10 @@ main {
 
   .navbar-nav li a {
     transition: color 0.1s ease-in-out;
+
+    &:active {
+      color: #333;
+    }
   }
 
   #logo {
@@ -108,9 +116,10 @@ main {
   }
 }
 
-/* Coding Index */
+/* Shared Index */
 
-#code {
+.index {
+
   .project-container {
     position: relative;
     width: 100%;
@@ -142,14 +151,19 @@ main {
     .project-name {
       font-size: 2em;
     }
+  }
+}
 
-    .project-tech {
-      font-family: "Chivo", Arial, sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 10px;
-    }
+/* Coding Index */
+
+#code {
+
+  .project-tech {
+    font-family: "Chivo", Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
   }
 
   img {
@@ -161,9 +175,26 @@ main {
   }
 }
 
-/* Individual Projects */
+/* Design Index */
 
-#project {
+#design {
+
+  .project-container {
+
+    .design-cover-container {
+      width: 100%;
+      object-fit: cover;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Shared Project */
+
+.project {
 
   .project-item-header {
     font-family: "Chivo", Arial, sans-serif;
@@ -178,22 +209,6 @@ main {
     color: #eee;
     background-color: #555;
     padding: 50px 0 30px 0;
-
-    h1 {
-      color: #ff7a62;
-    }
-
-    .project-source {
-      color: #9ddbe8;
-    }
-
-    .project-host {
-      color: #e1b3f7;
-    }
-
-    .project-tech {
-      color: #bdf397;
-    }
   }
 
   p {
@@ -246,6 +261,27 @@ main {
   .back-container {
     text-align: center;
   }
+}
+
+/* Code Project */
+
+#code-project {
+
+  h1 {
+    color: #ff7a62;
+  }
+
+  .project-source {
+    color: #9ddbe8;
+  }
+
+  .project-host {
+    color: #e1b3f7;
+  }
+
+  .project-tech {
+    color: #bdf397;
+  }
 
   .technical ul {
     margin: 0;
@@ -254,5 +290,28 @@ main {
   pre code {
     word-wrap: normal;
     white-space: pre;
+  }
+}
+
+/* Design Project */
+
+#design-project {
+
+  .project-blurb {
+    padding: 60px 0 50px 0;
+    text-align: center;
+  }
+
+  .project-item-header {
+    letter-spacing: 1.5px;
+  }
+
+  .project-details img {
+    box-shadow: none;
+  }
+
+  .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
