@@ -248,23 +248,26 @@ span.avoid-wrap {
 
 #illo.index {
 
-  .illo-cover-container {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
+  .project-container {
 
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      z-index: -1;
+    .illo-cover-container {
+      position: relative;
       width: 100%;
       height: 500px;
-      object-fit: cover;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        z-index: -1;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
     }
   }
 }
