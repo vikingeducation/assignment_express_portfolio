@@ -10,13 +10,13 @@ let getProject = (projectUrl) => {
 };
 
 router.get('/', function(req, res, next) {
-  res.render('illo/index', { title: "Blackwright - Illustration",
+  res.render('illo/index', { title: "Blackwright",
                              projects: illoProjects });
 });
 
 router.get('/:projectUrl', function(req, res, next) {
   let project = getProject(req.params.projectUrl);
-  res.render('illo/project', { title: project.name,
+  res.render('illo/project', { title: "Blackwright - " + project.name,
                                project: project,
                                partial: '_' + project.projectUrl });
 });

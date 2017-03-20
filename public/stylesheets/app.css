@@ -5,6 +5,25 @@ body {
   background-color: #fefefe;
   text-rendering: optimizeLegibility; }
 
+.nav-pattern {
+  position: absolute;
+  top: 0;
+  height: 76px;
+  width: 100%; }
+
+.gap-pattern {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .05; }
+
+.seigaiha {
+  background-color: black;
+  background-image: radial-gradient(circle at 100% 150%, black 24%, white 25%, white 28%, black 29%, black 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, black 24%, white 25%, white 28%, black 29%, black 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, white 10%, black 11%, black 23%, white 24%, white 30%, black 31%, black 43%, white 44%, white 50%, black 51%, black 63%, white 64%, white 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, white 5%, black 6%, black 15%, white 16%, white 20%, black 21%, black 30%, white 31%, white 35%, black 36%, black 45%, white 46%, white 49%, transparent 50%, transparent), radial-gradient(circle at 0 50%, white 5%, black 6%, black 15%, white 16%, white 20%, black 21%, black 30%, white 31%, white 35%, black 36%, black 45%, white 46%, white 49%, transparent 50%, transparent);
+  background-size: 100px 50px;
+  z-index: -999; }
+
 .container {
   width: 92%; }
 
@@ -24,9 +43,7 @@ a.nav-link {
   text-decoration: none;
   -webkit-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out; }
-  a.nav-link:hover {
-    color: #333; }
-  a.nav-link:active {
+  a.nav-link:hover, a.nav-link:active {
     color: #333; }
 
 h3, h4 {
@@ -54,11 +71,14 @@ span.avoid-wrap {
   display: inline-block; }
 
 /* Top Navigation */
+#nav .navbar-fixed-top {
+  border: 0; }
+
 #nav .navbar {
   min-height: 76px;
   background-color: white;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  opacity: 0.95; }
+  opacity: 0.98; }
 
 #nav .navbar-nav li a {
   transition: color 0.1s ease-in-out; }
@@ -100,7 +120,9 @@ span.avoid-wrap {
 /* Shared Index */
 .index .project-container {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  background-color: #fefefe;
+  z-index: 1; }
   .index .project-container:hover .project-overlay {
     opacity: 0.9; }
   .index .project-container .project-overlay {
