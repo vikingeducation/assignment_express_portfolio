@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Chivo");
-html {
-  height: 100%; }
+@-ms-viewport {
+  width: device-width; }
 
 body {
   font-size: 16px;
@@ -10,8 +10,9 @@ body {
 
 .nav-pattern {
   position: absolute;
+  left: 0;
   top: 0;
-  height: 76px;
+  height: 75px;
   width: 100%; }
 
 .gap-pattern {
@@ -28,8 +29,7 @@ body {
   z-index: -999; }
 
 .container {
-  width: 92%;
-  background-color: #fefefe; }
+  width: 92%; }
 
 .container-fluid {
   padding: 0;
@@ -102,8 +102,8 @@ span.avoid-wrap {
   line-height: 46px; }
 
 #nav .navbar-toggle {
-  margin-top: 22px;
-  margin-bottom: 22px;
+  padding: 8px 8px;
+  margin: 23px 10px;
   border: 0; }
   #nav .navbar-toggle:focus {
     background-color: #fefefe; }
@@ -121,6 +121,13 @@ span.avoid-wrap {
   font-size: .85em;
   text-transform: uppercase;
   letter-spacing: 1.5px; }
+
+@media screen and (max-width: 767px) {
+  #nav .navbar-right li a {
+    height: 42px;
+    line-height: 22px; }
+  #nav #navbar ul {
+    padding-bottom: 15px; } }
 
 /* Shared Index */
 .index .project-container {

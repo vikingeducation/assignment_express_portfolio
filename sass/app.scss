@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Chivo');
 
-html {
-  height: 100%;
+@-ms-viewport{
+  width: device-width;
 }
 
 body {
@@ -13,8 +13,9 @@ body {
 
 .nav-pattern {
   position: absolute;
+  left: 0;
   top: 0;
-  height: 76px;
+  height: 75px;
   width: 100%;
 }
 
@@ -40,7 +41,6 @@ body {
 
 .container {
   width: 92%;
-  background-color: #fefefe;
 }
 
 .container-fluid {
@@ -136,8 +136,8 @@ span.avoid-wrap {
   }
 
   .navbar-toggle {
-    margin-top: 22px;
-    margin-bottom: 22px;
+    padding: 8px 8px;
+    margin: 23px 10px;
     border: 0;
 
     &:focus {
@@ -163,6 +163,19 @@ span.avoid-wrap {
     font-size: .85em;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #nav {
+    .navbar-right li a {
+      height: 42px;
+      line-height: 22px;
+    }
+
+    #navbar ul {
+      padding-bottom: 15px;
+    }
   }
 }
 
