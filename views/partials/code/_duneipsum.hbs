@@ -1,41 +1,36 @@
-<section class="detail technical">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-sm-3 col-md-offset-2 col-md-2">
-      <div class="project-item-header">Technical Notes</div>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-2 col-md-2">
-      <ul>
-        <li>File I/O with randomization</li>
-        <li>Ruby classes</li>
-      </ul>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-2 col-md-2">
-      <ul>
-        <li>Media queries</li>
-        <li>ERB partials</li>
-      </ul>
-    </div>
+<section class="row detail technical">
+  <div class="col-xs-offset-1 col-xs-10 col-sm-3 col-md-offset-2 col-md-2">
+    <div class="project-item-header">Technical Notes</div>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-2 col-md-2">
+    <ul>
+      <li>File I/O with randomization</li>
+      <li>Ruby classes</li>
+    </ul>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-2 col-md-2">
+    <ul>
+      <li>Media queries</li>
+      <li>ERB partials</li>
+    </ul>
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-7">
-      <img src="https://raw.githubusercontent.com/blackwright/dune-ipsum/master/screenshots/screenshot1.jpg">
-    </div>
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-7">
+    <img src="https://raw.githubusercontent.com/blackwright/dune-ipsum/master/screenshots/screenshot1.jpg">
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <h4>Core Functionality</h4>
-      <p>The user makes a POST request for one to five paragraphs, for which instances of the Paragraph class are created.</p>
-      <p>Paragraphs are formed from instances of the Sentence class, which in turn uses hardcoded sentence structures to combine instances of the Word class.</p>
-      <p>In the code to the right, the structure "nvran" would create a sentence of noun-verb-article-adjective-noun.</p>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
-      <pre class="language-ruby"><code class="language-ruby">
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+    <h4>Core Functionality</h4>
+    <p>The user makes a POST request for one to five paragraphs, for which instances of the Paragraph class are created.</p>
+    <p>Paragraphs are formed from instances of the Sentence class, which in turn uses hardcoded sentence structures to combine instances of the Word class.</p>
+    <p>In the code to the right, the structure "nvran" would create a sentence of noun-verb-article-adjective-noun.</p>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
+    <pre class="language-ruby"><code class="language-ruby">
 class Sentence
   attr_reader :text
 
@@ -80,19 +75,17 @@ class Sentence
       sentence.join(" ").gsub(" , ", ", ") + ". "
     end
 end
-      </code></pre>
-    </div>
+    </code></pre>
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <h4>Conjunction Junction</h4>
-      <p>The Word class is responsible for randomly pulling a single line from a word list file. Lists are grouped by part of speech.</p>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
-      <pre class="language-ruby"><code class="language-ruby">
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+    <h4>Conjunction Junction</h4>
+    <p>The Word class is responsible for randomly pulling a single line from a word list file. Lists are grouped by part of speech.</p>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
+    <pre class="language-ruby"><code class="language-ruby">
 class Word
 
 ...
@@ -117,21 +110,18 @@ class Word
       word.strip
     end
 end
-      </code></pre>
-    </div>
+    </code></pre>
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <p>The "Copy Text" button uses Clipboard.JS to copy all text, while "Other Memory" resubmits a request for the same number of paragraphs.</p>
-      <p>The CSS utilizes media queries for a responsive design.</p>
-    </div>
-    <div class="col-xs-offset-1 col-xs-8 col-sm-offset-1 col-sm-6 col-md-offset-0 col-md-4 col-lg-3">
-      <div class="project-image-container">
-        <img src="https://raw.githubusercontent.com/blackwright/dune-ipsum/master/screenshots/screenshot2.jpg">
-      </div>
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+    <p>The "Copy Text" button uses Clipboard.JS to copy all text, while "Other Memory" resubmits a request for the same number of paragraphs.</p>
+    <p>The CSS utilizes media queries for a responsive design.</p>
+  </div>
+  <div class="col-xs-offset-1 col-xs-8 col-sm-offset-1 col-sm-6 col-md-offset-0 col-md-4 col-lg-3">
+    <div class="project-image-container">
+      <img src="https://raw.githubusercontent.com/blackwright/dune-ipsum/master/screenshots/screenshot2.jpg">
     </div>
   </div>
 </section>

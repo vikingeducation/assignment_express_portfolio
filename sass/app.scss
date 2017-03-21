@@ -44,7 +44,6 @@ body {
 }
 
 .container-fluid {
-  padding: 0;
   background-color: #fefefe;
 }
 
@@ -129,6 +128,7 @@ header#nav {
 
   .navbar-toggle {
     border: 0;
+    margin-right: 7px;
 
     &:focus {
       background-color: #fefefe;
@@ -233,6 +233,8 @@ header#nav {
     z-index: -1;
   }
 }
+
+
 
 /* Design Index */
 

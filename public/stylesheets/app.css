@@ -32,7 +32,6 @@ body {
   width: 92%; }
 
 .container-fluid {
-  padding: 0;
   background-color: #fefefe; }
 
 h1, h2, h3, h4 {
@@ -94,7 +93,8 @@ header#nav #logo {
   letter-spacing: 1px; }
 
 header#nav .navbar-toggle {
-  border: 0; }
+  border: 0;
+  margin-right: 7px; }
   header#nav .navbar-toggle:focus {
     background-color: #fefefe; }
   header#nav .navbar-toggle:hover, header#nav .navbar-toggle:not(.collapsed) {

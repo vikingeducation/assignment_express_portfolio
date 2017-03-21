@@ -1,62 +1,57 @@
-<section class="detail technical">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-sm-3 col-md-offset-2 col-md-2">
-      <div class="project-item-header">Technical Notes</div>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-3 col-md-2">
-      <ul>
-        <li>Ruby classes and modules</li>
-        <li>Dynamic card generation</li>
-      </ul>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-3 col-md-2">
-      <ul>
-        <li>Browser sessions</li>
-        <li>ERB partials</li>
-      </ul>
+<section class="row detail technical">
+  <div class="col-xs-offset-1 col-xs-10 col-sm-3 col-md-offset-2 col-md-2">
+    <div class="project-item-header">Technical Notes</div>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-3 col-md-2">
+    <ul>
+      <li>Ruby classes and modules</li>
+      <li>Dynamic card generation</li>
+    </ul>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-3 col-md-2">
+    <ul>
+      <li>Browser sessions</li>
+      <li>ERB partials</li>
+    </ul>
+  </div>
+</section>
+
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+    <h4>Place Your Bet</h4>
+    <p>Start a round by entering the amount you want to bet.</p>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+    <div class="project-image-container">
+      <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack1.jpg">
     </div>
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <h4>Place Your Bet</h4>
-      <p>Start a round by entering the amount you want to bet.</p>
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+    <h4>Pick a Card, Any Card</h4>
+    <p>Each player is dealt two cards to start. One of the dealer's cards will be face down. Choose "Hit" to be dealt an additional card. If the player busts, the game resolves to an outcome automatically.</p>
+    <p>On the back-end, a "real" deck of 52 cards is created and shuffled for play. When the dealer has less than 20 cards, a new deck is swapped in.</p>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+    <div class="project-image-container">
+      <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack2.jpg">
     </div>
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
-      <div class="project-image-container">
-        <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack1.jpg">
+  </div>
+</section>
+
+<section class="row detail">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+        <h4>Sessions</h4>
+        <p>For this RESTful application, the game state is tracked via browser session variables. Instances of the Hand, Deck, and Bank classes are initialized for each request and then used for game operations.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <h4>Pick a Card, Any Card</h4>
-      <p>Each player is dealt two cards to start. One of the dealer's cards will be face down. Choose "Hit" to be dealt an additional card. If the player busts, the game resolves to an outcome automatically.</p>
-      <p>On the back-end, a "real" deck of 52 cards is created and shuffled for play. When the dealer has less than 20 cards, a new deck is swapped in.</p>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
-      <div class="project-image-container">
-        <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack2.jpg">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <h4>Sessions</h4>
-      <p>For this RESTful application, the game state is tracked via browser session variables. Instances of the Hand, Deck, and Bank classes are initialized for each request and then used for game operations.</p>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
-      <div class="row">
-        <div class="col-xs-12">
-          <pre class="language-ruby"><code class="language-ruby">
+      <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+        <div class="row">
+          <div class="col-xs-12">
+            <pre class="language-ruby"><code class="language-ruby">
 module SessionsHelper
 
   def load_deck
@@ -72,50 +67,50 @@ module SessionsHelper
   end
 
 ...
-          </code></pre>
-        </div>
-        <div class="col-xs-12 spacer">
-          <pre class="language-ruby"><code class="language-ruby">
+            </code></pre>
+          </div>
+          <div class="col-xs-12 spacer">
+            <pre class="language-ruby"><code class="language-ruby">
 get '/blackjack' do
   deck = Deck.new(load_deck)
   @dealer = Hand.new(load_dealer)
   @player = Hand.new(load_player)
   erb :blackjack
 end
-          </code></pre>
+            </code></pre>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <h4>Stand Your Ground</h4>
-      <p>If the player chooses to stand, the dealer is dealt the rest of its cards, the round ends, and the game resolves the outcome.</p>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
-      <div class="project-image-container">
-        <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack3.jpg">
-      </div>
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+    <h4>Stand Your Ground</h4>
+    <p>If the player chooses to stand, the dealer is dealt the rest of its cards, the round ends, and the game resolves the outcome.</p>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+    <div class="project-image-container">
+      <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack3.jpg">
     </div>
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <h4>CSS Playing Cards</h4>
-      <p>Each card is represented as an array containing a rank and suit. Each rank has an associated partial used for rendering. These partials have placeholders for the suit and CSS class that are replaced via string substitution.</p>
-      <p>For example, a three of hearts would have a rank of "3" and a suit of <span class="avoid-wrap">"hearts."</span> The app will go looking for a partial called <span class="avoid-wrap">"_3.erb"</span> and replace each instance of the string <span class="avoid-wrap">"&#123;&#123; suit &#125;&#125;"</span> with <span class="avoid-wrap">"&amp;hearts;"</span> - the HTML character code for a heart.</p>
-      <p><span class="avoid-wrap">"&#123;&#123; card class &#125;&#125;"</span> is replaced with "front red," rendering the card face in red.</p>
-      <p>CSS source: <a href="http://www.brainjar.com/css/cards">http://www.brainjar.com/css/cards</a></p>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
-      <div class="row">
-        <div class="col-xs-12">
-          <pre class="language-html"><code class="language-html">
+<section class="row detail">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+        <h4>CSS Playing Cards</h4>
+        <p>Each card is represented as an array containing a rank and suit. Each rank has an associated partial used for rendering. These partials have placeholders for the suit and CSS class that are replaced via string substitution.</p>
+        <p>For example, a three of hearts would have a rank of "3" and a suit of <span class="avoid-wrap">"hearts."</span> The app will go looking for a partial called <span class="avoid-wrap">"_3.erb"</span> and replace each instance of the string <span class="avoid-wrap">"&#123;&#123; suit &#125;&#125;"</span> with <span class="avoid-wrap">"&amp;hearts;"</span> - the HTML character code for a heart.</p>
+        <p><span class="avoid-wrap">"&#123;&#123; card class &#125;&#125;"</span> is replaced with "front red," rendering the card face in red.</p>
+        <p>CSS source: <a href="http://www.brainjar.com/css/cards">http://www.brainjar.com/css/cards</a></p>
+      </div>
+      <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+        <div class="row">
+          <div class="col-xs-12">
+            <pre class="language-html"><code class="language-html">
 _3.erb
 
 &lt;div class="card"&gt;
@@ -126,10 +121,10 @@ _3.erb
     &lt;div class="spotB5"&gt;&#123;&#123; suit &#125;&#125;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-        </code></pre>
-      </div>
-      <div class="col-xs-12 spacer">
-        <pre class="language-ruby"><code class="language-ruby">
+          </code></pre>
+        </div>
+        <div class="col-xs-12 spacer">
+          <pre class="language-ruby"><code class="language-ruby">
 module BlackjackHelper
 
   def render_card(rank, suit, card_class)
@@ -149,61 +144,54 @@ module BlackjackHelper
   end
 
 ...
-        </code></pre>
+          </code></pre>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <h4>Win, Lose, or Push</h4>
-      <p>The player who finishes with a greater score and without busting wins. Winning returns double the bet amount.</p>
-      <p>When a player gets a blackjack (21), that player wins unless the game ends in a tie (push). A push returns the bet to the player. A loss means that the bet is lost.</p>
-      <p>When calculating score, aces are worth either 1 or 10 points - whichever is more beneficial to the player. Other non-face cards are worth their normal number value. Face cards are worth 10 points each.</p>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
-      <div class="project-image-container">
-        <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack4.jpg">
-      </div>
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+    <h4>Win, Lose, or Push</h4>
+    <p>The player who finishes with a greater score and without busting wins. Winning returns double the bet amount.</p>
+    <p>When a player gets a blackjack (21), that player wins unless the game ends in a tie (push). A push returns the bet to the player. A loss means that the bet is lost.</p>
+    <p>When calculating score, aces are worth either 1 or 10 points - whichever is more beneficial to the player. Other non-face cards are worth their normal number value. Face cards are worth 10 points each.</p>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+    <div class="project-image-container">
+      <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack4.jpg">
     </div>
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <h4>Hard Luck Blues</h4>
-      <p>If the player runs out of the money, betting is no longer possible and a new game must be started.</p>
-      <p>Checks are in place to prevent resubmission of POST data to duplicate or change the game outcome.</p>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
-      <div class="project-image-container">
-        <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack5.jpg">
-      </div>
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+    <h4>Hard Luck Blues</h4>
+    <p>If the player runs out of the money, betting is no longer possible and a new game must be started.</p>
+    <p>Checks are in place to prevent resubmission of POST data to duplicate or change the game outcome.</p>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+    <div class="project-image-container">
+      <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack5.jpg">
     </div>
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
-      <h4>Mobile View</h4>
-      <p>Responsive design through media queries.</p>
-    </div>
-    <div class="col-xs-offset-1 col-xs-10 col-sm-8 col-md-offset-0 col-md-5 col-lg-4">
-      <div class="project-image-container">
-        <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/mobile.jpg">
-      </div>
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2">
+    <h4>Mobile View</h4>
+    <p>Responsive design through media queries.</p>
+  </div>
+  <div class="col-xs-offset-1 col-xs-10 col-sm-8 col-md-offset-0 col-md-5 col-lg-4">
+    <div class="project-image-container">
+      <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/mobile.jpg">
     </div>
   </div>
 </section>
 
-<section class="detail">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8">
-      <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack6.jpg">
-    </div>
+<section class="row detail">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8">
+    <img src="https://raw.githubusercontent.com/blackwright/blackjack/master/screenshots/blackjack6.jpg">
   </div>
 </section>

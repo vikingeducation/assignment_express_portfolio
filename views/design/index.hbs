@@ -1,24 +1,26 @@
 <main id="design" class="index">
   <div class="container-fluid">
-    <div class="row no-gutters">
+    <div class="row">
+      <div class="row no-gutters">
 
-    {{#each projects as |project|}}
-      <div class="col-xs-12 col-sm-6">
-        <a href="design/{{ project.projectUrl }}/">
-          <div class="project-container">
-            <div class="project-overlay">
-              <div class="project-caption">
-                <div class="project-name">{{ project.name }}</div>
+      {{#each projects as |project|}}
+        <div class="col-xs-12 col-sm-6">
+          <a href="design/{{ project.projectUrl }}/">
+            <div class="project-container">
+              <div class="project-overlay">
+                <div class="project-caption">
+                  <div class="project-name">{{ project.name }}</div>
+                </div>
+              </div>
+              <div class="design-cover-container">
+                <img src="{{ project.cover }}">
               </div>
             </div>
-            <div class="design-cover-container">
-              <img src="{{ project.cover }}">
-            </div>
-          </div>
-        </a>
+          </a>
+        </div>
+      {{/each}}
+
       </div>
-    {{/each}}
-    
     </div>
   </div>
 </main>
