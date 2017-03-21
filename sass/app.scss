@@ -90,6 +90,12 @@ h3, h4 {
   margin-top: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .spacer-responsive {
+    margin-top: 30px;
+  }
+}
+
 span.avoid-wrap {
   display: inline-block;
 }
@@ -161,10 +167,6 @@ header#nav {
     .navbar-right li a {
       height: 42px;
       line-height: 22px;
-    }
-
-    #navbar ul {
-      padding-bottom: 7px;
     }
   }
 }

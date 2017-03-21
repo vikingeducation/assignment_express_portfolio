@@ -68,6 +68,10 @@ h3, h4 {
 .spacer-lg {
   margin-top: 30px; }
 
+@media screen and (max-width: 767px) {
+  .spacer-responsive {
+    margin-top: 30px; } }
+
 span.avoid-wrap {
   display: inline-block; }
 
@@ -115,9 +119,7 @@ header#nav li {
 @media screen and (max-width: 767px) {
   #nav .navbar-right li a {
     height: 42px;
-    line-height: 22px; }
-  #nav #navbar ul {
-    padding-bottom: 7px; } }
+    line-height: 22px; } }
 
 /* Shared Index */
 .index .project-container {
