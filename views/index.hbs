@@ -1,0 +1,27 @@
+<head>
+</head>
+
+<body>
+  <header>
+    <h1>Code Projects by Nicholas Romeo</h1>
+  </header>
+
+  <section>
+    {{#each projects as |project|}}
+      <ul>
+        <li>
+          <a href="/projects/{{project.name}}">{{project.name}}</a>
+        </li>
+        <div>
+            <div>
+              <p>{{project.shortDesc}}</p>
+            </div>
+        </div>
+      </ul>
+    {{/each}}
+  </section>
+</body>
+
+<footer>
+  <p>Nicholas Romeo, Seattle WA
+</footer>
