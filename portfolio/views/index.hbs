@@ -1,0 +1,19 @@
+<h1>Personal Portfolio</h1>
+
+{{#each projects as |project|}}
+  <div class="project">
+    <div class="project-name">
+      <a href="/projects/{{project.name}}">
+         {{project.name}}
+       </a>
+    </div>
+
+    <div class="project-technologies">
+      {{#each project.technologies as |technology|}}
+        <div class="project-technology">
+          {{technology}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+{{/each}}
