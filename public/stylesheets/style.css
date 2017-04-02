@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-link {
+  font-size: 24px;
+}
+
+.content {
+  margin: 0 auto;
+  font-size: 1em;
+  max-width: 850px;
+  text-align: center;
+}
+
+.project-name {
+  margin-top: 80px;
+}
+
+.project-img {
+  margin: auto;
+  max-height: 300px;
+}
+
