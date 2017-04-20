@@ -8,7 +8,9 @@ const findProject = (id) => {
 
 router.get('/:id', (req, res, next) => {
   const project = findProject(req.params.id);
-  res.render('project', {project: project});
+  res.render('project', {
+    title: "Portfolio: " + project.name,
+    project: project});
 });
 
 module.exports = router;

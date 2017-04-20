@@ -5,6 +5,7 @@ const {projects} = require('../models/projects');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
+    title: 'Christian Florez: Portfolio',
     projects: projects
   });
 });
