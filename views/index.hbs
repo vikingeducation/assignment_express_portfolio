@@ -1,0 +1,15 @@
+<header>
+  <h1>Personal Portfolio</h1>
+</header>
+
+<main>
+  <section>
+    <ul class="project-list">
+    {{#each projects as |project|}}
+      <li>
+        <a href="/projects/{{project.id}}">{{project.name}}</a>
+      </li>
+    {{/each}}
+    </ul>
+  </section>
+</main>
