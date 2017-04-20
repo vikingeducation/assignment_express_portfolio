@@ -1,0 +1,15 @@
+<header>
+  <h1>Project: {{project.name}}</h2>
+</header>
+<section>
+  <img class="project-img" src="/images/{{project.image}}" alt="Image of {{project.name}}">
+  <h3>Technologies Used:</h3>
+    <ul class="technology-list">
+      {{#each project.technologies as |technology|}}
+        <li>
+          {{technology}}
+        </li>
+      {{/each}}
+    </ul>
+  <p class="github-link">Link to <a href="{{project.link}}">GitHub Repository</a></p>
+</section>
