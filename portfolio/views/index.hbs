@@ -1,2 +1,28 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>Tyler Ketron's Project Portfolio</h1>
+
+{{#each projects as |project|}}
+<div class="project">
+
+  <div class="project-name">
+    <a href="/projects/{{project.name}}">
+      {{project.name}}
+    </a>
+  </div>
+
+  <div class="project-link">
+    <a href="{{project.link}}">
+      Github Repo
+    </a>
+  </div>
+
+  <div class="project-technologies">
+    <ul>
+    {{#each project.technologies as |technology|}}
+      <li class="project-technology">
+        {{technology}}
+      </li>
+    {{/each}}
+  </ul>
+  </div>
+</div>
+{{/each}}
