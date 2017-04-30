@@ -1,0 +1,21 @@
+<h1>{{project.name}}</h1>
+
+<div class="project-link">
+  <a href="{{project.link}}">
+    Github Repo
+  </a>
+</div>
+
+<div class="project-technologies">
+  <ul class="technologies-list">
+    {{#each project.technologies as |technology|}}
+      <li>
+        {{technology}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="project-image">
+  <img src="{{project.image}}">
+</div>
