@@ -1,0 +1,21 @@
+<h1>Projects</h1>
+
+
+<div class='projects'>
+  {{#each projects as |project|}}
+  <div class='project-names'>
+    <a href='/projects/{{project.name}}'>
+      {{project.name}}
+    </a>
+  </div>
+  <div class='project-tech'>
+    {{project.technologies}}
+  </div>
+  <div class = 'project-link'>
+    {{project.gitHubLink}}
+  </div>
+  <div class= 'project-img'>
+    {{project.image}}
+  </div>
+  {{/each}}
+</div>
