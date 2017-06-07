@@ -1,0 +1,10 @@
+<h1>{{project.title}}</h1>
+
+<p>
+  Created using:
+  {{#each project.tech as |tech|}}
+    <p>
+      {{tech}}
+    </p>
+  {{/each}}
+</p>
