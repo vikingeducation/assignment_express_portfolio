@@ -8,7 +8,9 @@ const getProject = (name) => {
 }
 
 router.get('/:project', function(req, res, next){
+  console.log(req.params);
   const project = getProject(req.params.project)
+  console.log(project)
   res.render('project', { project: project})
 })
 

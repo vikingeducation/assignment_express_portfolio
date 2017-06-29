@@ -1,7 +1,23 @@
-<h1>{{project.name}}</h1>
+<header>
+  <h1>{{project.name}}</h1>
+  <span>{{project.description}}<span>
+</header>
 
-<p>{{project.description}}</p>
+<main class='flex-row center' id='project'>
 
-<p>{{project.technologies}}</p>
 
-<p>{{project.image}}</p>
+  <div class='flex-col project'>
+
+    <div class='wrap flex-col'>
+      <img src='{{project.image}}'>
+    </div>
+
+
+
+    <h2>Technologies used: {{project.technologies}}</h2>
+    <span><a href='{{project.gitHubLink}}'>{{project.gitHubLink}}</a></span>
+
+
+  </div>
+
+</main>

@@ -1,21 +1,21 @@
-<h1>Projects</h1>
+<header>
+  <h1>Projects</h1>
+</header>
 
+<main class='flex-row' id='projects-main'>
 
-<div class='projects'>
   {{#each projects as |project|}}
-  <div class='project-names'>
-    <a href='/projects/{{project.name}}'>
-      {{project.name}}
-    </a>
-  </div>
-  <div class='project-tech'>
-    {{project.technologies}}
-  </div>
-  <div class = 'project-link'>
-    {{project.gitHubLink}}
-  </div>
-  <div class= 'project-img'>
-    {{project.image}}
+
+  <div class='flex-col project'>
+
+    <div class='wrap flex-col'>
+      <a href='./projects/{{project.name}}'><img src='{{project.image}}'></a>
+    </div>
+    <span><a href='./projects/{{project.name}}'>{{project.name}}</a></span>
+    <span>Technologies used: {{project.technologies}}</span>
+    <span><a href='{{project.gitHubLink}}'>{{project.gitHubLink}}</a></span>
+
   </div>
   {{/each}}
-</div>
+
+</main>
