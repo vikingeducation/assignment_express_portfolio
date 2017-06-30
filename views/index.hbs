@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+
+<div class="main-container">
+	{{#each projects as |project|}}
+		<div class="project-name-container">
+			<div class="project-name">
+				<a href="/project/{{project.name}}"><h3>{{project.name}}</h3></a>
+			</div>
+
+			<div class="project-tech-container">
+				{{#each project.technologies as |tech|}}
+					<div class="project-tech">
+						{{tech}}
+					</div>
+				{{/each}}
+			</div>
+
+			<div class="project-link-container">
+				<a href={{project.link}} class="project-link">Link to Github</a>	
+			</div>
+
+			<div class="project-img-container">
+				<img src={{project.img}} class="project-img">
+			</div>
+		</div>
+	{{/each}}
+</div>
+
+
