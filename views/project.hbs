@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{project.name}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="main-project-container">
+      <div class="project-container">
+      	<h1 class="special-font">{{project.name}}</h1>
+        
+        <div class="line"></div>
+
+        <div class="project-tech-container">
+          {{#each project.technologies as |tech|}}
+            <div class="project-tech">
+              | {{tech}} |
+            </div>
+          {{/each}}
+        </div>
+
+      	<div class="special-font">
+      		{{project.description}}
+      	</div>
+
+        <div class="line"></div>
+        
+        <div class="special-font">
+          <a href={{project.liveLink}}>Check it out here!</a>
+        </div>
+      </div>
+    </div>
+  	
+  </body>
+</html>

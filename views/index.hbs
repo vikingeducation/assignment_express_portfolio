@@ -1,0 +1,24 @@
+
+<h1 class="main-title special-font">{{title}}</h1>
+
+<div class="main-index-container">
+	{{#each projects as |project|}}
+
+		<div class="projects-container special-font">
+			<div class="project-name-container">
+				<a href="/project/{{project.name}}"><h3>{{project.name}}</h3></a>
+			</div>
+
+			<div class="project-link-container">
+				<a href={{project.githubLink}} class="project-link">Link to Github</a>	
+			</div>
+
+			<div class="project-img-container">
+				<img src={{project.img}} class="project-img">
+			</div>
+		</div>
+
+	{{/each}}
+</div>
+
+
