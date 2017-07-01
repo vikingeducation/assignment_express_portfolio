@@ -4,7 +4,7 @@ const { projects } = require('../models/projects');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Benjamin Soung\'s Portfolio', projects: projects });
+  res.render('index', { title: 'benjamin soung\'s portfolio', projects: projects });
 });
 
 module.exports = router;

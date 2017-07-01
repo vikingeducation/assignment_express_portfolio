@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { Project, projects } = require('../models/projects');
+const { projects } = require('../models/projects');
 
 const findProject = (name) => {
 	return projects.find(project => name == project.name);
