@@ -1,0 +1,30 @@
+{
+  "name": "assignment_express_portfolio",
+  "version": "1.0.0",
+  "description": "An application to showcase Alex's Software Applications",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Willenbrink/assignment_express_portfolio.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Software",
+    "Javascript"
+  ],
+  "author": "Alex Willenbrink",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-Willenbrink/assignment_express_portfolio/issues"
+  },
+  "homepage": "https://github.com/Alex-Willenbrink/assignment_express_portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "lodash": "^4.17.4"
+  }
+}
