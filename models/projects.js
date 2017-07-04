@@ -80,6 +80,7 @@ const projects = [
   new Project(
     'Node.js Web Server',
     ['JavaScript', 'Node.js'],
+    'https://github.com/thebopshoobop/assignment_build_a_nodejs_server',
     ['node_get.png', 'node_post.png'],
     'A Simple web server that displays some information about the requests that it recieves.'
   )
