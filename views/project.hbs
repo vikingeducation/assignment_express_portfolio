@@ -1,0 +1,26 @@
+<header>
+  <h1><a href="/">{{title}}</a></h1>
+  <h2>{{project.name}}</h2>
+</header>
+
+<section>
+  <h3>Summary:</h3>
+  <p>{{project.summary}}</p>
+  <a href="{{project.repo}}">Github</a>
+</section>
+
+<section>
+  <h3>Technologies Used</h3>
+  <ul>
+    {{#each project.tech as |tech|}}
+    <li>{{tech}}</li>
+    {{/each}}
+  </ul>
+</section>
+
+<section>
+  <h3>In Action</h3>
+  {{#each project.images as |image|}}
+  <a href="/images/{{image}}"><img src="/images/{{image}}"></a>
+  {{/each}}
+</section>

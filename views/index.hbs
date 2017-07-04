@@ -1,14 +1,17 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<header>
+  <h1>{{title}}</h1>
+</header>
 
-<h2>Projects</h2>
-<ul>
-  {{#each projects as |project|}}
-  <li>
-    <h3><a href="{{{project.slug}}}">{{{project.name}}}</a></h3>
-    {{#each project.tech as |tech|}}
-    <em>{{{tech}}}</em>
+<section>
+  <h2>Projects</h2>
+  <ul>
+    {{#each projects as |project|}}
+    <li>
+      <h3><a href="{{project.slug}}">{{project.name}}</a></h3>
+      {{#each project.tech as |tech|}}
+      <em>{{tech}}</em>
+      {{/each}}
+    </li>
     {{/each}}
-  </li>
-  {{/each}}
-</ul>
+  </ul>
+</section>

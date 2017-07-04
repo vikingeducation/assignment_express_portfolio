@@ -1,6 +1,6 @@
 'use strict';
 
-var slug = require('slug');
+const slug = require('slug');
 
 class Project {
   constructor(name, tech, repo, images, summary) {
@@ -90,4 +90,10 @@ projects.forEach(function(project) {
   project.slug = slug(project.name);
 });
 
-module.exports = {projects: projects};
+const getProject = function(slug) {
+  return projects.find(function(project) {
+    return project.slug === slug;
+  });
+}
+
+module.exports = {projects: projects, getProject: getProject};
