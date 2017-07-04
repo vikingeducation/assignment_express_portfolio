@@ -1,5 +1,7 @@
 'use strict';
 
+var slug = require('slug');
+
 class Project {
   constructor(name, tech, repo, images, summary) {
     this.name = name;
@@ -83,5 +85,9 @@ const projects = [
   )
 
 ];
+
+projects.forEach(function(project) {
+  project.slug = slug(project.name);
+});
 
 module.exports = {projects: projects};
