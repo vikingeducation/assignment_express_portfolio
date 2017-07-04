@@ -1,2 +1,14 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<h2>Projects</h2>
+<ul>
+  {{#each projects as |project|}}
+  <li>
+    <h3>{{{project.name}}}</h3>
+    {{#each project.tech as |tech|}}
+    <em>{{{tech}}}</em>
+    {{/each}}
+  </li>
+  {{/each}}
+</ul>

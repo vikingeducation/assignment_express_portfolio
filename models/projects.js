@@ -76,7 +76,7 @@ const projects = [
   ),
 
   new Project(
-    'Node.js Web Server'
+    'Node.js Web Server',
     ['JavaScript', 'Node.js'],
     ['node_get.png', 'node_post.png'],
     'A Simple web server that displays some information about the requests that it recieves.'
