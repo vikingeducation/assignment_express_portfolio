@@ -1,3 +1,9 @@
+a, u {
+  text-decoration: none; }
+
+a {
+  text-decoration: none !important; }
+
 .navbar {
   border-radius: 0px; }
 
@@ -35,29 +41,30 @@ body {
   border: 5px gray solid; }
 
 .project-box {
-  background-color: white;
-  border: 4px gray solid;
+  background-color: #D3D3D3;
   margin-bottom: 20px;
   border-radius: 10px; }
   .project-box img {
-    border-radius: 5px;
-    padding: 5px; }
+    border-radius: 10px;
+    height: 220px; }
   .project-box h3 {
-    padding-top: 10px;
-    border-top: 4px gray solid;
+    padding: 5px 0 15px 0;
+    color: black;
     margin-bottom: 0px;
     text-align: center;
-    font-size: 24px; }
+    font-size: 24px;
+    font-weight: bold; }
+  .project-box .project-title {
+    text-decoration: none; }
   .project-box p {
     padding: 10px;
     line-height: 1.8em; }
 
 .project-box:hover {
-  background-color: gray; }
+  background-color: #586E40; }
 
 .project-info-box {
   background-color: white;
-  border: 1px black solid;
   padding: 0px;
   margin: 10px; }
   .project-info-box h2 {
@@ -91,11 +98,19 @@ body {
     padding-top: 2%;
     display: inline-block; }
   .main-project-info p {
-    margin-left: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-top: 10px;
     font-weight: bold;
     line-height: 2em;
     font-size: 14px; }
+
+.headline-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  padding-top: 0px;
+  margin-bottom: 50px; }
 
 .contact-me h2 {
   text-align: center;
