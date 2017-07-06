@@ -1,0 +1,20 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+div {
+	margin: 10px;
+}
+
+div.project {
+	width: 300px;
+	margin: 30px;
+	padding: 5px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+}
+
+a {
+  color: #00B7FF;
+}
