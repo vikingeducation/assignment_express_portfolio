@@ -1,7 +1,7 @@
 {
   "name": "assignment_express_portfolio",
   "version": "1.0.0",
-  "description": "An application to showcase Alex's Software Applications",
+  "description": "Alex's Website to Give Alex Software Related Info",
   "main": "app.js",
   "scripts": {
     "test": "test",

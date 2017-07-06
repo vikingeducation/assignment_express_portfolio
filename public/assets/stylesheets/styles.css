@@ -1,0 +1,132 @@
+.navbar {
+  border-radius: 0px; }
+
+.navbar-header {
+  width: 100%; }
+  .navbar-header .navbar-nav {
+    margin-left: 30%; }
+    .navbar-header .navbar-nav #house-box-anchor {
+      padding: 0px;
+      margin: 0px; }
+    .navbar-header .navbar-nav #house-box {
+      height: 40px;
+      width: 40px;
+      background-image: url("/assets/images/house-icon-gray.png");
+      background-size: 40px 40px; }
+    .navbar-header .navbar-nav #house-box:hover {
+      background-image: url("/assets/images/house-icon-white.png");
+      background-size: 40px 40px; }
+  .navbar-header h1 {
+    font-weight: bold;
+    text-align: center;
+    color: white; }
+
+body {
+  background-color: #9BAE86; }
+
+.homepage p {
+  font-size: 22px;
+  line-height: 2em; }
+.homepage h2 {
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center; }
+.homepage img {
+  border: 5px gray solid; }
+
+.project-box {
+  background-color: white;
+  border: 4px gray solid;
+  margin-bottom: 20px;
+  border-radius: 10px; }
+  .project-box img {
+    border-radius: 5px;
+    padding: 5px; }
+  .project-box h3 {
+    padding-top: 10px;
+    border-top: 4px gray solid;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 24px; }
+  .project-box p {
+    padding: 10px;
+    line-height: 1.8em; }
+
+.project-box:hover {
+  background-color: gray; }
+
+.project-info-box {
+  background-color: white;
+  border: 1px black solid;
+  padding: 0px;
+  margin: 10px; }
+  .project-info-box h2 {
+    background-color: #7A9162;
+    margin: 0px;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    padding: 10px; }
+  .project-info-box h3 {
+    font-size: 18px;
+    padding-left: 16px;
+    font-weight: bold; }
+
+.main-project-info {
+  background-color: white;
+  padding: 0px;
+  margin: 10px; }
+  .main-project-info h1 {
+    background-color: #7A9162;
+    padding: 10px;
+    font-size: 44px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px; }
+  .main-project-info img {
+    margin-left: 40px;
+    width: 95%;
+    margin: 0px;
+    padding-left: 5%;
+    padding-top: 2%;
+    display: inline-block; }
+  .main-project-info p {
+    margin-left: 5%;
+    margin-top: 10px;
+    font-weight: bold;
+    line-height: 2em;
+    font-size: 14px; }
+
+.contact-me h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  padding-top: 0px;
+  margin-bottom: 50px; }
+.contact-me h3 {
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  line-height: 1.8em;
+  width: 80%; }
+
+.form-group label {
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  margin-left: auto; }
+.form-group input {
+  width: 500px;
+  display: block;
+  margin: auto;
+  text-align: center; }
+.form-group textarea {
+  margin-bottom: 40px; }
+.form-group button {
+  font-weight: bold;
+  background-color: #586E40;
+  display: block;
+  margin: auto; }
+
+/*# sourceMappingURL=styles.css.map */
