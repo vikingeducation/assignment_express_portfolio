@@ -1,0 +1,57 @@
+[
+	{
+		"name": "Tic-Tac-Toe",
+		"description": "A command line Tic-Tac-Toe game.",
+		"language": "Ruby",
+		"github": "https://github.com/Avonyel/tictactoe",
+		"image": "../images/tictactoe.png"
+	},
+
+	{
+		"name": "Sphinx Cave",
+		"description": "A short text adventure/CYOA with a handful of different puzzles.",
+		"language": "Python",
+		"github": "https://github.com/Avonyel/sphinxcave",
+		"image": "../images/sphinxcave.png"
+	},
+
+	{
+		"name": "Tower of Hanoi",
+		"description": "A command line Tower of Hanoi game.",
+		"language": "Ruby",
+		"github": "https://github.com/Avonyel/assignment_toh",
+		"image": "../images/hanoi.png"
+	},
+
+	{
+		"name": "Word Challenge Problem",
+		"description": "Given a string, outputs the index of the string within a hypothetical alphabetically-sorted array of all the strings containing the same characters.",
+		"language": "Ruby",
+		"github": "https://github.com/Avonyel/word-challenge-problem",
+		"image": "../images/word_challenge.png"
+	},
+
+	{
+		"name": "Viking CSS Garden",
+		"description": "An exercise in CSS styling.",
+		"language": "CSS",
+		"github": "https://github.com/Avonyel/assignment_viking_css_garden",
+		"image": "../images/viking_css_garden.png"
+	},
+
+	{
+		"name": "Fakebook",
+		"description": "A Facebook mockup to practice HTML and CSS",
+		"language": "HTML/CSS",
+		"github": "https://github.com/Avonyel/project_prep_facebook_pages",
+		"image": "../images/fakebook.png"
+	},
+
+	{
+		"name": "JQuery Warmup",
+		"description": "Snippets to practice working with the DOM and JQuery.",
+		"language": "Javascript/JQuery",
+		"github": "https://github.com/Avonyel/assignment_jq_ee_sprint",
+		"image": "../images/jquery_practice.png"
+	}
+]
