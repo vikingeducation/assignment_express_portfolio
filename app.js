@@ -1,9 +1,27 @@
 "use strict";
 
+require("dotenv").config();
 const express     = require("express");
 const app         = express();
 const projectInfo = require("./lib/projectInfo");
-const helpers  = require("./lib/helpers");
+const helpers     = require("./lib/helpers");
+const nodemailer  = require("nodemailer");
+const json        = require("json");
+const bodyParser  = require("body-parser");
+
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: false
+}));
+
+
+const transporter = nodemailer.createTransport({
+  service: "Gmail",
+  auth: {
+    user: process.env.MYEMAIL,
+    pass: process.env.MYPASSWORD
+  }
+});
 
 const handlebars  = require("express-handlebars").create(
   {
@@ -38,8 +56,31 @@ app.get('/project', function(req, res) {
 })
 
 app.get('/contact', function(req, res) {
+
+
   res.render("partials/contact");
-})
+
+});
+
+app.post('/contact', function(req, res) {
+  res.render("partials/contact");
+  console.log(req.body);
+
+    let mailOptions = {
+      from: req.body.email,
+      to: process.env.MYEMAIL,
+      subject: `message submitted from your website by ${req.body.name}`,
+      text: req.body.message
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
+});
 
 
 app.listen(app.get("port"), function() {

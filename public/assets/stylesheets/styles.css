@@ -111,22 +111,27 @@ body {
   line-height: 1.8em;
   width: 80%; }
 
-.form-group label {
+.form-input label {
   font-size: 16px;
   text-align: center;
   display: block;
   margin-left: auto; }
-.form-group input {
+.form-input input {
   width: 500px;
   display: block;
   margin: auto;
   text-align: center; }
-.form-group textarea {
+.form-input textarea {
   margin-bottom: 40px; }
-.form-group button {
+.form-input button {
   font-weight: bold;
   background-color: #586E40;
   display: block;
   margin: auto; }
+
+#sent-message-text {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */
