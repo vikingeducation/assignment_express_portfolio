@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-lg-12 contact-me">
+    <h2>Contact Me</h2>
+    <h3>Please feel free to send me messages regarding projects, feedback, or sweet ideas! I'll try to respond as soon as I can.</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+
+    <!--<form  enctype="text/plain">-->
+    <section class="form-input">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="name" class="form-control name" />
+      </div>
+      <div class="form-group">
+        <label>Your Email</label>
+        <input type="email" class="form-control email"/>
+      </div>
+      <div class="form-group">
+        <label>Your Message</label>
+        <textarea class="form-control message"></textarea>
+      </div>
+      <div>
+        <button class="btn btn-lg send-message">Submit</button>
+      </div>
+    </section>
+  </div>
+</div>
+<script type="text/Javascript">
+$(document).ready(function() {
+  $(".send-message").on("click", function() {
+    let name    = $(".name").val();
+    let email   = $(".email").val();
+    let message = $(".message").val();
+    let data    = {"name": name, "email": email, "message": message};
+
+    $.ajax({
+      type: 'POST',
+      data: data,
+      url: "/contact",
+      data: data,      success: function () {
+        console.log("Success! We're in business!")
+      },
+      error: function (xhr, status, error) {
+        console.log('Error: ' + error.message);
+      }
+    });
+
+
+    if($("#sent-message-text").length > 0) {
+      return;
+    }
+
+    let sentMessage = $("<h4>")
+      .text("Message sent successfully!")
+      .attr("id", "sent-message-text");
+
+    $(sentMessage).insertAfter(".form-input");
+  })
+});
+</script>

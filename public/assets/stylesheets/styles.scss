@@ -1,0 +1,219 @@
+a, u {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+@import "_colors.scss";
+
+.navbar {
+  border-radius: 0px;
+}
+
+.navbar-header {
+  width: 100%;
+
+  .navbar-nav {
+    margin-left: 30%;
+
+      #house-box-anchor {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #house-box {
+        height: 40px;
+        width: 40px;
+        background-image: url("/assets/images/house-icon-gray.png");
+        background-size: 40px 40px;
+      }
+
+      #house-box:hover {
+        background-image: url("/assets/images/house-icon-white.png");
+        background-size: 40px 40px;
+      }
+
+
+  }
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+}
+
+body {
+  background-color: $body-color;
+}
+
+.homepage {
+  p {
+    font-size: 22px;
+    line-height: 2em;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+  }
+  img {
+    border: 5px gray solid;
+  }
+}
+
+.project-box {
+  background-color: $light-gray;
+  //border: 0px $dark-color solid;
+  margin-bottom: 20px;
+  border-radius: 10px;
+
+  img {
+    border-radius: 10px;
+    //padding: 5px;
+    height: 220px;
+  }
+
+  h3 {
+    padding: 5px 0 15px 0;
+    //border-top: 4px gray solid
+    //background-color: $dark-color;
+    color: black;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .project-title {
+    text-decoration: none;
+  }
+
+  p {
+    padding: 10px;
+    line-height: 1.8em;
+  }
+}
+
+.project-box:hover {
+  background-color: $dark-color;
+}
+
+.project-info-box {
+  background-color: white;
+  //border: 4px black solid;
+  padding: 0px;
+  margin: 10px;
+
+  h2 {
+    background-color: $headline-color;
+    margin: 0px;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 18px;
+    padding-left: 16px;
+    font-weight: bold;
+  }
+}
+
+.main-project-info {
+  background-color: white;
+  padding: 0px;
+  margin: 10px;
+
+  h1 {
+    background-color: $headline-color;
+    padding: 10px;
+    font-size: 44px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+  }
+
+  img {
+    margin-left: 40px;
+    width: 95%;
+    margin: 0px;
+    padding-left: 5%;
+    padding-top: 2%;
+    display: inline-block;
+  }
+
+  p {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 10px;
+    font-weight: bold;
+    line-height: 2em;
+    font-size: 14px;
+  }
+}
+
+.headline-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+}
+
+.contact-me {
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    padding-top: 0px;
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    line-height: 1.8em;
+    width: 80%;
+  }
+}
+
+.form-input {
+  label {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+  }
+
+  input {
+    width: 500px;
+    display:block;
+    margin: auto;
+    //margin-left: 28%;
+    text-align: center;
+  }
+
+  textarea {
+    margin-bottom: 40px;
+  }
+
+  button {
+    font-weight: bold;
+    background-color: $dark-color;
+    display: block;
+    margin: auto;
+  }
+}
+
+#sent-message-text {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}

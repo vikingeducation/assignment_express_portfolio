@@ -1,0 +1,18 @@
+<div class="row">
+  <article class="col-lg-4 project-info-box">
+      <h2>Project Info</h2>
+      <h3><a href="{{project.githubRepo}}" target="_blank">Github Link</a></h3>
+      <h3><a ></a></h3>
+      <h3>Technologies Used</h3>
+      <ul>
+        {{#each project.techUsedArr}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </article>
+  <article class="col-lg-7 main-project-info">
+    <h1>{{project.title}}</h1>
+    <img src="{{project.image}}" />
+    <p>{{project.shortDes}}</p>
+  </article>
+</div>
