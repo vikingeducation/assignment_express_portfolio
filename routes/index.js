@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/projects/:name', function(req, res, next) {
-  res.render(req.params.name);
+  res.render(req.params.name, { projects: projects });
 })
 
 module.exports = router;
