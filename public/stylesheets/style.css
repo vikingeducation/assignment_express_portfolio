@@ -25,7 +25,16 @@ body {
       border-left: 5px solid transparent; }
     body .header-div .header:hover {
       border-left: 5px solid #8cc53a; }
-    body .header-div .subpage-header {
+  body .sub-page-header-div {
+    height: 200px;
+    background: #eeeee6;
+    box-shadow: 0 0 8px 20px #eeeee6;
+    margin: 40px 0;
+    text-align: center;
+    border-left: 5px solid transparent; }
+    body .sub-page-header-div .subpage-header-div:hover {
+      border-left: 5px solid #8cc53a; }
+    body .sub-page-header-div .subpage-header {
       filter: blur(0.7px);
       text-shadow: 6px 6px 18px grey;
       text-decoration: none;
@@ -36,10 +45,7 @@ body {
       width: 90%;
       font-size: 6.5vw;
       font-weight: bold;
-      color: black;
-      border-left: 5px solid transparent; }
-    body .header-div .subpage-header:hover {
-      border-left: 5px solid #8cc53a; }
+      color: black; }
   body .projects .big-div {
     margin-top: 40px;
     height: 720px; }
