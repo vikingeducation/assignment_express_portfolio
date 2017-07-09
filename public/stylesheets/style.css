@@ -5,7 +5,7 @@ body {
   background: #084853; }
   body .header-div {
     background: #eeeee6;
-    box-shadow: 0 0 24px 20px #eeeee6;
+    box-shadow: 0 0 8px 20px #eeeee6;
     margin: 40px 0; }
     body .header-div .header-image {
       width: 100%; }
@@ -30,7 +30,7 @@ body {
     body .projects .big-div .project-div {
       height: 620px;
       background: #eeeee6;
-      box-shadow: 0 0 24px 20px #eeeee6;
+      box-shadow: 0 0 8px 20px #eeeee6;
       width: 84%;
       margin: 30px 8%; }
       body .projects .big-div .project-div .project-names-div {
