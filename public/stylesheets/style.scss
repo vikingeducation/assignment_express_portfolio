@@ -48,6 +48,11 @@ body {
       height: 3vw;
       width: 3vw;
       float: left;
+      box-shadow: 4px 4px 18px grey;
+    }
+    .header-image .back-button:hover {
+      background: #02adbe;
+      border-radius: 50%;
     }
     .subpage-header {
       filter: blur(.7px);
