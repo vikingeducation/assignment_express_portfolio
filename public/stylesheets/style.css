@@ -8,7 +8,8 @@ body {
     box-shadow: 0 0 8px 20px #eeeee6;
     margin: 40px 0; }
     body .header-div .header-image {
-      width: 100%; }
+      width: 100%;
+      background: #eeeee6; }
     body .header-div .header {
       filter: blur(0.7px);
       text-shadow: 6px 6px 18px grey;
@@ -23,6 +24,21 @@ body {
       color: black;
       border-left: 5px solid transparent; }
     body .header-div .header:hover {
+      border-left: 5px solid #8cc53a; }
+    body .header-div .subpage-header {
+      filter: blur(0.7px);
+      text-shadow: 6px 6px 18px grey;
+      text-decoration: none;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      line-height: 150%;
+      width: 90%;
+      font-size: 6.5vw;
+      font-weight: bold;
+      color: black;
+      border-left: 5px solid transparent; }
+    body .header-div .subpage-header:hover {
       border-left: 5px solid #8cc53a; }
   body .projects .big-div {
     margin-top: 40px;

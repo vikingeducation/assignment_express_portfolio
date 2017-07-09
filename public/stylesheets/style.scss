@@ -11,6 +11,7 @@ body {
     margin: 40px 0;
     .header-image {
       width: 100%;
+      background: #eeeee6;
     }
     .header {
       filter: blur(.7px);
@@ -27,6 +28,23 @@ body {
       border-left: 5px solid transparent;
     }
     .header:hover {
+      border-left: 5px solid #8cc53a;
+    }
+    .subpage-header {
+      filter: blur(.7px);
+      text-shadow: 6px 6px 18px grey;
+      text-decoration: none;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      line-height: 150%;
+      width: 90%;
+      font-size: 6.5vw;
+      font-weight: bold;
+      color: black;
+      border-left: 5px solid transparent;
+    }
+    .subpage-header:hover {
       border-left: 5px solid #8cc53a;
     }
   }
