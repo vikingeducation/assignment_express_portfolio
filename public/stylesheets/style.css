@@ -34,6 +34,13 @@ body {
     border-left: 5px solid transparent; }
     body .sub-page-header-div .subpage-header-div:hover {
       border-left: 5px solid #8cc53a; }
+    body .sub-page-header-div .header-image .back-button {
+      position: relative;
+      top: -10px;
+      left: -10px;
+      height: 20px;
+      width: 20px;
+      float: left; }
     body .sub-page-header-div .subpage-header {
       filter: blur(0.7px);
       text-shadow: 6px 6px 18px grey;
@@ -43,13 +50,13 @@ body {
       left: 30px;
       line-height: 150%;
       width: 90%;
-      font-size: 5vw;
+      font-size: 4.4vw;
       font-weight: bold;
       color: #02adbe; }
       body .sub-page-header-div .subpage-header .projects-path {
         font-weight: normal;
         position: relative;
-        right: 1vw;
+        right: 3vw;
         color: #8cc53a; }
   body .projects .big-div {
     margin-top: 40px;
