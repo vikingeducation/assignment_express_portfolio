@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+
+
+body {
+  font: 14px "Julius Sans One", "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  background: #084853;
+  .header-div {
+    background: #eeeee6;
+    box-shadow: 0 0 24px 20px #eeeee6;
+    margin: 40px 0;
+    .header-image {
+      width: 100%;
+    }
+    .header {
+      filter: blur(.7px);
+      text-shadow: 6px 6px 18px grey;
+      text-decoration: none;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      line-height: 150%;
+      width: 40%;
+      font-size: 5.5vw;
+      font-weight: bold;
+      color: black;
+      border-left: 5px solid transparent;
+    }
+    .header:hover {
+      border-left: 5px solid #8cc53a;
+    }
+  }
+  .projects {
+    .big-div{
+      margin-top: 40px;
+      height: 720px;
+      .project-div {
+        height: 620px;
+        background: #eeeee6;
+        box-shadow: 0 0 24px 20px #eeeee6;
+        width: 84%;
+        margin: 30px 8%;
+        .project-names-div {
+          width: 90%;
+          text-align: center;
+          margin: 60px 5% 0 5%;
+          word-wrap: break-word;
+          border-left: 5px solid transparent;
+          a {
+            font-weight: bold;
+            text-decoration: none;
+            text-shadow: 6px 6px 18px grey;
+            color: #02adbe;
+            font-size: 35px;
+          }
+        }
+        .project-names-div:hover {
+          border-left: 5px solid #8cc53a;
+        }
+        .project-techs-div {
+          width: 90%;
+          text-align: center;
+          margin: 60px 5% 0 5%;
+          .project-techs {
+            font-size: 20px;
+            text-shadow: 6px 6px 18px grey;
+            color: #f79159;
+          }
+        }
+        .project-links-div {
+          text-align: center;
+          width: 90%;
+          margin: 60px 5% 0 5%;
+          button:hover {
+          }
+        }
+        .project-images-div {
+          margin: 60px 10%;
+          padding: 0 0 30px 0;
+          width: 80%;
+          height: 275px;
+          .project-images {
+            img {
+              width: 100%;
+              box-shadow: 6px 6px 18px black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

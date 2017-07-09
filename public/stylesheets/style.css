@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One");
+body {
+  font: 14px "Julius Sans One", "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  background: #084853; }
+  body .header-div {
+    background: #eeeee6;
+    box-shadow: 0 0 24px 20px #eeeee6;
+    margin: 40px 0; }
+    body .header-div .header-image {
+      width: 100%; }
+    body .header-div .header {
+      filter: blur(0.7px);
+      text-shadow: 6px 6px 18px grey;
+      text-decoration: none;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      line-height: 150%;
+      width: 40%;
+      font-size: 5.5vw;
+      font-weight: bold;
+      color: black;
+      border-left: 5px solid transparent; }
+    body .header-div .header:hover {
+      border-left: 5px solid #8cc53a; }
+  body .projects .big-div {
+    margin-top: 40px;
+    height: 720px; }
+    body .projects .big-div .project-div {
+      height: 620px;
+      background: #eeeee6;
+      box-shadow: 0 0 24px 20px #eeeee6;
+      width: 84%;
+      margin: 30px 8%; }
+      body .projects .big-div .project-div .project-names-div {
+        width: 90%;
+        text-align: center;
+        margin: 60px 5% 0 5%;
+        word-wrap: break-word;
+        border-left: 5px solid transparent; }
+        body .projects .big-div .project-div .project-names-div a {
+          font-weight: bold;
+          text-decoration: none;
+          text-shadow: 6px 6px 18px grey;
+          color: #02adbe;
+          font-size: 35px; }
+      body .projects .big-div .project-div .project-names-div:hover {
+        border-left: 5px solid #8cc53a; }
+      body .projects .big-div .project-div .project-techs-div {
+        width: 90%;
+        text-align: center;
+        margin: 60px 5% 0 5%; }
+        body .projects .big-div .project-div .project-techs-div .project-techs {
+          font-size: 20px;
+          text-shadow: 6px 6px 18px grey;
+          color: #f79159; }
+      body .projects .big-div .project-div .project-links-div {
+        text-align: center;
+        width: 90%;
+        margin: 60px 5% 0 5%; }
+      body .projects .big-div .project-div .project-images-div {
+        margin: 60px 10%;
+        padding: 0 0 30px 0;
+        width: 80%;
+        height: 275px; }
+        body .projects .big-div .project-div .project-images-div .project-images img {
+          width: 100%;
+          box-shadow: 6px 6px 18px black; }
+
+/*# sourceMappingURL=style.css.map */
