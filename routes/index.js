@@ -8,4 +8,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { projects: projects });
 });
 
+router.get('/projects/:name', function(req, res, next) {
+  res.render(req.params.name);
+})
+
 module.exports = router;
