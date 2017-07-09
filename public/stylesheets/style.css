@@ -26,7 +26,7 @@ body {
     body .header-div .header:hover {
       border-left: 5px solid #8cc53a; }
   body .sub-page-header-div {
-    height: 200px;
+    height: 10vw;
     background: #eeeee6;
     box-shadow: 0 0 8px 20px #eeeee6;
     margin: 40px 0;
@@ -43,7 +43,7 @@ body {
       left: 30px;
       line-height: 150%;
       width: 90%;
-      font-size: 6.5vw;
+      font-size: 5vw;
       font-weight: bold;
       color: black; }
   body .projects .big-div {
