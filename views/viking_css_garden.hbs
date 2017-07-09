@@ -19,35 +19,15 @@
     </div>
 
         <div class="projects">
-          {{#each projects as |proj|}}
-          <div class="big-div col-xs-12 col-md-6">
+          <div class="big-div col-xs-12">
             <div class="project-div">
               <div class="project-names-div">
                 <a class="project-names" href="/projects/{{proj.nameUrl}}">
                   {{proj.name}}
                 </a>
               </div>
-              <div class="project-techs-div">
-                <div class="project-techs">
-                  {{proj.techs}}
-                </div>
-              </div>
-              <div class="project-links-div">
-                <form action="{{proj.link}}">
-                  <button class="btn-primary" type="submit" value="Go to GitHub">
-                    GitHub
-                  </button>
-                </form>
-              </div>
-              <div class="project-images-div">
-                <div class="project-images">
-                  <!--Improve resolution of photos before releasing app-->
-                  <img src="{{proj.imagePath}}"/>
-                </div>
-              </div>
             </div>
           </div>
-          {{/each}}
 
         </div>
   </body>
