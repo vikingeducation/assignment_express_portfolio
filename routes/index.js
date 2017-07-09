@@ -9,6 +9,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/projects/:name', function(req, res, next) {
+  if(err){
+    writeHead(404);
+    res.end("404 : Not Found... What a bummer!");
+  }
   res.render(req.params.name);
 })
 
