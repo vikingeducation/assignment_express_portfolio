@@ -52,7 +52,13 @@ body {
       width: 90%;
       font-size: 5vw;
       font-weight: bold;
-      color: black;
+      color: #02adbe;
+      .projects-path {
+        font-weight: normal;
+        position: relative;
+        right: 1vw;
+        color: #8cc53a;
+      }
     }
   }
   .projects {
