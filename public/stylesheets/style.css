@@ -40,7 +40,11 @@ body {
       left: 0vw;
       height: 3vw;
       width: 3vw;
-      float: left; }
+      float: left;
+      box-shadow: 4px 4px 18px grey; }
+    body .sub-page-header-div .header-image .back-button:hover {
+      background: #02adbe;
+      border-radius: 50%; }
     body .sub-page-header-div .subpage-header {
       filter: blur(0.7px);
       text-shadow: 6px 6px 18px grey;
