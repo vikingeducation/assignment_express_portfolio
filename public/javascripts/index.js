@@ -7,7 +7,9 @@ var q = {
 
 
 q.back.on("click", function() {
-  res.redirect('/');
+  router.get('/projects/:name', function(req, res, next) {
+    res.redirect('/');
+  })
 })
 
 
