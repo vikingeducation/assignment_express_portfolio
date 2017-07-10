@@ -4,6 +4,7 @@ class Project {
   constructor(name, techs, description, link, imagePath) {
     this.name = name;
     this.techs = techs;
+    this.description = description;
     this.link = link;
     this.imagePath = imagePath;
     this.nameUrl = snakeCase(name);
