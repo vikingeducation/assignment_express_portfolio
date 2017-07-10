@@ -14,6 +14,7 @@ body {
       background: #eeeee6;
     }
     .header {
+      filter: blur(.1px);
       text-shadow: 6px 6px 18px grey;
       text-decoration: none;
       position: absolute;
@@ -38,6 +39,7 @@ body {
     text-align: center;
     border-left: 5px solid transparent;
     .header-image .back-button {
+      filter: blur(.1px);
       border-radius: 50%;
       position: relative;
       top: -1vw;
@@ -52,6 +54,7 @@ body {
       border-radius: 50%;
     }
     .subpage-header {
+      filter: blur(.1px);
       text-shadow: 6px 6px 18px grey;
       text-decoration: none;
       line-height: 150%;
