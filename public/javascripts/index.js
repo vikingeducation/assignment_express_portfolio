@@ -7,7 +7,7 @@ var q = {
 
 
 q.back.on("click", function() {
-  window.history.back();
+  res.redirect('/');
 })
 
 
