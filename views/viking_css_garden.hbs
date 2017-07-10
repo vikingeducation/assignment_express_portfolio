@@ -19,12 +19,31 @@
       <a class="subpage-header" href=#><span class="projects-path">Projects/</span>Viking CSS Garden</a>
     </div>
 
-        <div class="projects">
-          <div class="big-div col-xs-12">
-            <div class="project-div">
-
-            </div>
-          </div>
-
+    <div class="big-div col-xs-12">
+      <div class="project-div">
+        <div class="project-names-div">
+          <h6 class="project-names">
+            {{projects[1].name}}
+          </h6>
         </div>
+        <div class="project-techs-div">
+          <div class="project-techs">
+            {{projects[1].techs}}
+          </div>
+        </div>
+        <div class="project-links-div">
+          <form action="{{projects[1].link}}">
+            <button class="btn-primary" type="submit" value="Go to GitHub">
+              GitHub
+            </button>
+          </form>
+        </div>
+        <div class="project-images-div">
+          <div class="project-images">
+            <!--Improve resolution of photos before releasing app-->
+            <img src="{{projects[1].imagePath}}"/>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
