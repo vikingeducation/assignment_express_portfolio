@@ -14,12 +14,12 @@ body {
       background: #eeeee6;
     }
     .header {
-      filter: blur(.7px);
+      filter: blur(.1px);
       text-shadow: 6px 6px 18px grey;
       text-decoration: none;
       position: absolute;
       top: 20px;
-      left: 30px;
+      left: 1vw;
       line-height: 150%;
       width: 40%;
       font-size: 5.5vw;
@@ -39,7 +39,7 @@ body {
     text-align: center;
     border-left: 5px solid transparent;
     .header-image .back-button {
-      filter: blur(.3px);
+      filter: blur(.1px);
       border-radius: 50%;
       position: relative;
       top: -1vw;
@@ -66,9 +66,10 @@ body {
       font-weight: bold;
       color: #02adbe;
       .projects-path {
+        font-size: 2vw;
         font-weight: normal;
         position: relative;
-        right: 3vw;
+        right: 2vw;
         color: #8cc53a;
       }
     }
