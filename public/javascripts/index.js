@@ -7,7 +7,7 @@ var q = {
 
 
 q.back.on("click", function() {
-  goBack();
+  window.history.back();
 })
 
 
