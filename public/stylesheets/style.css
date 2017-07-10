@@ -11,6 +11,7 @@ body {
       width: 100%;
       background: #eeeee6; }
     body .header-div .header {
+      filter: blur(0.1px);
       text-shadow: 6px 6px 18px grey;
       text-decoration: none;
       position: absolute;
@@ -32,6 +33,7 @@ body {
     text-align: center;
     border-left: 5px solid transparent; }
     body .sub-page-header-div .header-image .back-button {
+      filter: blur(0.1px);
       border-radius: 50%;
       position: relative;
       top: -1vw;
@@ -44,6 +46,7 @@ body {
       background: #02adbe;
       border-radius: 50%; }
     body .sub-page-header-div .subpage-header {
+      filter: blur(0.1px);
       text-shadow: 6px 6px 18px grey;
       text-decoration: none;
       line-height: 150%;
@@ -113,9 +116,5 @@ body {
           box-shadow: 6px 6px 18px black; }
     body .projects .big-div #subpage-project-div {
       height: 1000px; }
-
-@media only screen and (max-width: 640px) {
-  body .header-div .header {
-    font-size: 35px !important; } }
 
 /*# sourceMappingURL=style.css.map */
