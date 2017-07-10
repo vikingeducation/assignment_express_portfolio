@@ -7,9 +7,7 @@ var q = {
 
 
 q.back.on("click", function() {
-  router.get('/projects/:name', function(req, res, next) {
-    res.redirect('/');
-  })
+  window.location.href='/';
 })
 
 
