@@ -2,11 +2,13 @@
 $(document).ready(function(){
 
 var q = {
-  title: $("h1"),
+  back: $(".back-button"),
 }
 
 
-
+q.back.on("click", function() {
+  goBack();
+})
 
 
 });
