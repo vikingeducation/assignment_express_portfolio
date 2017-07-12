@@ -1,0 +1,29 @@
+<h1>Project: {{project.name}}</h1>
+
+
+<h5>Tech Used</h5>
+<div>
+  <ul>
+    {{#each project.tech as |tech|}}
+      <li>{{tech}}</li>
+    {{/each}}
+  </ul>
+</div>
+<a href={{project.git}}>Check it out on Github!</a>
+<!-- need some logic to check if there's a site -->
+<br>
+<a href={{project.site}}>Check out the site!</a>
+<div>
+  <img src="../{{project.img}}">
+</div>
+
+
+<h5>My Development Workflow</h5>
+<img src="../images/charlie_mail_room.jpg">
+
+<!-- Coffees Needed for the project -->
+<!-- how do you do a for loop ??
+<div id="coffee-graph">
+  <h5>Coffees used to fuel this project</h5>
+
+-->

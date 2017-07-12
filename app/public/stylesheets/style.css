@@ -1,0 +1,50 @@
+
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: grey;
+}
+body h1,h2,h3,h4,h5 {
+  color: white;
+}
+body * {
+  padding-left: 10px;
+}
+h5 {
+  border-bottom: 1px solid white;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  /*color: #00B7FF;*/
+  color: white;
+}
+
+img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+#project-wrapper {
+  border: 2px dashed white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 70%;
+}
+#site-wrapper {
+  border: 2px dashed white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#git-link p {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

@@ -1,0 +1,46 @@
+<h1>My Projects</h1>
+
+<div id="site-wrapper">
+  {{#each projects as |p|}}
+    <div id="project-wrapper">
+      <h2><a href="/projects/{{p.name}}">{{p.name}}</a></h2>
+      <div>
+        <img src={{p.img}}>
+      </div>
+      <h5>Tech Used</h5>
+      <div>
+        <ul>
+          {{#each p.tech as |tech|}}
+            <li>{{tech}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <a href={{p.git}} id="git-link"><p>Check it out on Github!</p></a>
+    </div>
+  {{/each}}
+  <!--add blog here?-->
+  <!--
+  <aside id="project-wrapper">
+  </aside>
+  -->
+</div>
+
+<p>Pretty cool right??</p>
+<p>Site by Eric Glover</p>
+<p>Code TM T-Swift</p>
+
+<!---
+The project's name
+A list of the technologies used
+A link to a GitHub repository
+An image of the project running (either from the browser or command line)
+
+project prototype
+project.name ""
+project.tech {}
+project.git ""
+project.img ""  //source path
+project.site ""
+
+
+-->
