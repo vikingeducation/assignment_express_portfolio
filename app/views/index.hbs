@@ -1,32 +1,7 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
-
-
-
-<h3>Norse Gods</h3>
-
-{{#each gods as |god|}}
-  <div class="god">
-    <div class="god-name">
-      <a href="/gods/{{god.name}}">
-         {{god.name}}
-       </a>
-    </div>
-
-    <div class="god-domains">
-      {{#each god.domains as |domain|}}
-        <div class="god-domain">
-          {{domain}}
-        </div>
-      {{/each}}
-    </div>
-  </div>
-{{/each}}
-
 <h4>My Projects</h4>
 
 {{#each projects as |p|}}
-  <h5>{{p.name}}</h5>
+  <h5><a href="/projects/{{p.name}}">{{p.name}}</a></h5>
   <h5>Tech Used</h5>
   <div>
     <ul>

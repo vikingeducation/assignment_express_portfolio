@@ -1,10 +1,14 @@
 class Project {
-  constructor(name, git, img, tech, site){
+  //hopefully it accepts duration as an optional argument
+  constructor(name, git, img, tech, site, comments, duration){
     this.name = name;
     this.git = git;
     this.img = img;
     this.tech = tech;
     this.site = site;
+    //defaults incase not provided right now.
+    this.comments = comments || "";
+    this.duration = duration || 5;
   }
 }
 
