@@ -2,13 +2,14 @@ var express = require('express');
 var router = express.Router();
 
 const {gods} = require('../models/gods')
+const {projects} = require('../models/projects');
 
 debugger;
 
 // Notice how we're calling get on the router
 // rather than on the application
 router.get('/', function(req, res, next) {
-  res.render('index', { gods: gods, title: 'Express'} );
+  res.render('index', { gods: gods, projects: projects, title: 'Express'} );
 })
 
 module.exports = router;

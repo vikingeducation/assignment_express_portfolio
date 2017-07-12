@@ -25,7 +25,7 @@
 
 <h4>My Projects</h4>
 
-{{#each project as |p|}}
+{{#each projects as |p|}}
   <h5>{{p.name}}</h5>
   <h5>Tech Used</h5>
   <div>
@@ -35,9 +35,9 @@
       {{/each}}
     </ul>
   </div>
-  <a src={{project.git}}>Check it out on Github!</a>
+  <a href={{p.git}}>Check it out on Github!</a>
   <div>
-    <img src={{project.img}}>
+    <img src={{p.img}}>
   </div>
 {{/each}}
 
@@ -54,6 +54,7 @@ project.name ""
 project.tech {}
 project.git ""
 project.img ""  //source path
+project.site ""
 
 
 -->
