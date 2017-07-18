@@ -1,0 +1,116 @@
+/*colors*/
+/*navbar stuff*/
+header {
+  background: #2A3A3F;
+  color: white;
+  padding: 18px 0; }
+  header a {
+    color: white; }
+  header .menu {
+    padding: 0 0 16px 0; }
+  header .icon-container {
+    padding: 88px 0;
+    display: flex;
+    justify-content: center;
+    padding-left: 1%;
+    border-radius: 0 2px 2px 0;
+    background-color: #FDCD3B; }
+    header .icon-container a {
+      text-align: center; }
+    header .icon-container .fa-home {
+      color: white;
+      font-size: 3em; }
+  header #menu-container {
+    float: right; }
+  header #h-container {
+    float: left; }
+
+/*icons below header*/
+#icons {
+  background-color: #eee; }
+  #icons a {
+    font-size: 2.5em;
+    color: black;
+    padding: 18px; }
+
+/*intro content*/
+#intro {
+  padding: 20px; }
+  #intro p {
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px; }
+  #intro h1 {
+    margin-left: 12px; }
+
+/*projects*/
+#projects {
+  padding: 30px;
+  background-color: #eee; }
+  #projects h3 {
+    font-family: "Roboto", sans-serif; }
+  #projects .project-row {
+    padding: 30px 0; }
+  #projects .tag-col {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; }
+  #projects .tag-text {
+    font-size: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: #2A3A3F;
+    color: white; }
+   #projects img{
+   	height: 400px;
+   }
+    #projects .tag-text:hover {
+      background-color: #FDCD3B;
+      color: #2A3A3F; }
+  #projects .button-container button {
+    display: block;
+    margin: auto;
+    background-color: #2A3A3F;
+    padding: 16px; }
+
+/*skills*/
+#skills {
+  padding: 25px 0 49px 0; }
+  #skills .logo-left {
+    float: left; }
+  #skills .technologies {
+    margin-bottom: 10px; }
+
+/*footer*/
+footer {
+  background-color: #FDCD3B;
+  padding: 15px 0; }
+  footer .contact {
+    padding-top: 9px; }
+  footer h5 {
+    font-weight: bold; }
+  footer a {
+    display: block;
+    color: black; }
+
+#copyright {
+  background-color: #2A3A3F;
+  color: white; }
+  #copyright p {
+    padding: 14px 0 0 14px; }
+
+/*small screen classes*/
+@media screen and (max-width: 50em) {
+  header .icon-container {
+    background-color: transparent;
+    font-size: 0.5em;
+    padding: 0 0 0 7%; }
+  header h1 {
+    padding: 30px 0; } }
+/*medium screen classes*/
+@media screen and (min-width: 40em) and (max-width: 60em) {
+  header h1 {
+    font-size: 33px;
+    padding: 27px 0; } }

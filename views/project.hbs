@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <title>Full Stack Javascript</title>
+  
+  <!--fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  
+  <!--stylesheets-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="public/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+</head>
+
+
+<body>
+
+<div class="row tag-col"> 
+          <div class="small-12 large-10 large-offset-1 column project-row">
+
+               <section class="small-12 column img-center">
+                  <h3 class="text-center"> {{project.name}} </h3>
+                  <a href="./project/{{project.url}}">
+                    <img class="float-center" src="{{project.img_url}}">
+                  </a>
+                  <a href="{{project.github}}">See on Github</a>
+
+                  <p> {{project.description}} </p>
+                 
+                  <!--tags-->
+                 <aside class="row tag-col">
+                        <ul class="tags menu">
+	                        {{#each project.technologies as |t|}}
+	                          <li class="tag-text"> {{t}} </li>
+	                        {{/each}}
+                       </ul>
+                 </aside> 
+               </section>
+          </div>
+</div>
+
+ <!--JS-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
+

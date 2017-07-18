@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <title>Full Stack Javascript</title>
+  
+  <!--fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  
+  <!--stylesheets-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="styles/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+</head>
+
+
+<body>
+  
+  <!-- navbar -->
+  <header>
+    <div class="row top-header">
+      <section class="small-1 column icon-container">
+        <div class="top-bar-title">
+          <a href="#"><i class="fa fa-home"></i> </a>
+        </div>
+      </section>
+    
+      <section id="menu-container" class="small-9 column">
+          <div class="top-bar-right">
+            <ul class="menu">
+              <li><a href="#"> About </a></li>
+              <li><a href="#"> Projects </a></li>
+              <li><a href="#"> More </a></li>
+            </ul>
+        </div>
+    </section>
+    
+      <section class="medium-8 medium-offset-2 column" id="h-container">
+        <h1 class="text-center"> Hi I'm Brandon, a full stack javascript developer </h1>
+      </section>
+      </div>
+  </header>
+  
+  
+  <!-- header icons -->
+      <section class="row" id="icons">
+        <div class="small-12 large-4 large-offset-4 column text-center">
+          <a href="#"><i class="fa fa-github"></i></a>
+          <a href="#"><i class="fa fa-stack-overflow"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-codepen"></i></a>
+        </div>
+      </section>
+
+      
+  <!-- intro text -->
+  <section id="intro">
+      <section class="row">
+        <div class="small-12 medium-6 columns intro-para">
+          <p> Javascript is the language of the web. From single page apps to full, feature-rich applications, Javascript finds a way. So why not master the language of the web?</p>
+        </div>
+        <div class="small-12 medium-6 columns intro-para">
+          <p> Some projects were built using plain old Javascript. Some use the full MEAN stack with a goodie or two thrown in. </p>
+        </div>
+      </section>
+  </section>
+
+<div id="projects">
+      <h1 class="text-center"> See For Yourself </h1>
+      {{#each projects as |p|}}
+
+      <div class="row tag-col"> 
+          <div class="small-12 large-10 large-offset-1 column project-row">
+
+               <section class="small-12 column img-center">
+                  <h3 class="text-center"> {{p.name}} </h3>
+                  <a href="./project/{{p.url}}">
+                    <img class="float-center" src="{{p.img_url}}">
+                  </a>
+                  <a href="{{p.github}}">See on Github</a>
+
+                 
+                  <!--tags-->
+                 <aside class="row tag-col">
+                        <ul class="tags menu">
+	                        {{#each p.technologies as |t|}}
+	                          <li class="tag-text"> {{t}} </li>
+	                        {{/each}}
+                       </ul>
+                 </aside> 
+               </section>
+            </div>
+            </div>
+            {{/each}}
+        </div><!--/end .row-->
+
+        <div id="skills">
+    <h2 class="text-center"> Here's what I use </h2>
+    
+    <section class="row">
+        <div class="small-12 medium-8 medium-offset-2 column technologies">
+          <div class="small-2 column">
+            <img 
+                 alt="HTML5" 
+                 src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png">
+            </img>
+          </div>
+          <div class="small-2 column">
+              <img alt="CSS3"
+                   src="https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/042015/css3.png?itok=bzukaL4s">
+             </img>
+          </div>
+          <div class="small-2 column">
+            <img 
+                 alt="Javascript"
+                 src="http://ecodile.com/wp-content/uploads/2015/10/node_icon2.png">
+            </img>
+          </div>
+          <div class="small-2 column">
+            <img 
+                 alt="JQuery"
+                 src="http://markimarta.com/wp-content/uploads/2016/08/jquery-logo1.png">               </img>
+          </div>
+          <div class="small-2 column">
+            <img 
+                 alt="Sass"
+                 src="http://sass-lang.com/assets/img/styleguide/seal-color-aef0354c.png">                   </img>
+          </div>
+          <div class="small-2 column">
+            <img     
+                 alt="Node.JS"
+                 src="https://tublitzed.com/img/portfolio/node/browser/full/1.jpg">                    </img>
+          </div>
+        </div>
+    </section>
+
+    <section class="row">
+      <div class="small-12 medium-8 medium-offset-2 column">
+        <div class="small-2 column logo-left">
+          <img
+               alt="Git"
+               src="https://git-scm.com/images/logos/logomark-orange@2x.png"
+          </img>
+        </div>
+        <div class="small-2 column logo-left">
+          <img
+               alt="foundation"
+               src="http://zurb.com/stickers/images/intro-foundation.png"
+          </img>
+        </div>
+        <div class="small-2 column logo-left">
+              <img 
+                   alt="Bootstrap" 
+                   src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg">
+              </img>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- footer -->
+  <footer class="row">
+    <section class="medium-5 medium-offset-1 column contact">
+      <h5> Contact Me </h3>
+      <ul class="menu">
+        <a><li> <span>Phone Number:</span> (555)555-5555</li></a>
+        <a><li> <span>Email:</span> bparkerproductions@gmail.com </li></a>
+      </ul>
+    </section>
+    
+    <section class="medium-4 column footer-links">
+      <h5> See More </h5>
+      <ul class="menu">
+        <a href="#"><li>Github</li></a>
+        <a href="#"><li>Stack Overflow</li></a>
+        <a href="#"><li>Linked In</li></a>
+        <a href="#"><li>Code Pen</li></a>
+      </ul>
+    </section>  
+</footer>
+<section class="row" id="copyright">
+   <p> Copyright 2017 - Handcoded with love </p>
+</section>
+  
+  <!--JS-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
+
+
