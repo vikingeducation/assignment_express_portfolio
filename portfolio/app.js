@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var projects = require('./routes/projects');
+var project = require('./routes/project');
 
 var app = express();
 
@@ -44,5 +44,10 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(3000, function () {
+  // This function is run when the app starts up.
+  console.log('loading')
+})
 
 module.exports = app;

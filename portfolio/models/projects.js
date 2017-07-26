@@ -1,7 +1,9 @@
 class Project {
   constructor(name, technology, codepen, image) {
     this.name = name
-    this.domains = domains
+    this.technology = technology
+    this.codepen = codepen
+    this.image = image
   }
 }
 
