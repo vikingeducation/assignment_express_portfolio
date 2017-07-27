@@ -8,8 +8,8 @@ const findProject = (name) => {
 
 /* GET home page. */
 router.get('/:name', function(req, res, next) {
-  const project = Project(req.params.name)
-  res.render('project', { project: project })
+  const project = findProject(req.params.name)
+  res.render('project', { project })
 });
 
 module.exports = router
