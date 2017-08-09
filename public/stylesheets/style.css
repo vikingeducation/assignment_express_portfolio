@@ -28,8 +28,26 @@ section.project-tile {
   text-align: left;
 }
 
-p.repo-link {
+.project-tile p.repo-link {
   position: absolute;
   bottom: 0px;
   left: 80px;
+}
+
+article.project-show {
+  position: relative;
+  background-color:  white;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-width: 400px;
+}
+
+.project-show img {
+  width: 100%;
+}
+
+.project-show section {
+  position: relative;
+  padding: 20px;
 }

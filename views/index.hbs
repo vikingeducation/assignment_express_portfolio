@@ -5,13 +5,8 @@
 <p>Here is a list of projects and their repos:</p>
 {{#each allProjects as |project|}}
   <section class="project-tile">
-    <a href="{{project.repo}}" target="_blank" alt="{{project.name}}" title="{{project.name}}"><img src="{{project.imageFile}}"></a>
+    <a href="/projects/{{project.slug}}" alt="{{project.name}}" title="{{project.name}}"><img src="{{project.imageThumb}}"></a>
     <h2>{{project.name}}</h2>
-    <ul>
-      {{#each project.technologies as |technology|}}
-        <li>{{technology}}</li>
-      {{/each}} <!-- technology -->
-    </ul>
     <p class="repo-link"><a href="{{project.repo}}" target="_blank" alt="{{project.name}}" title="{{project.name}}">repo</a></p>
   </section>
 {{/each}} <!-- project -->
