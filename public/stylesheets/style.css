@@ -1,0 +1,53 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+a {
+  color: #00B7FF;
+}
+
+section.project-tile {
+  position: relative;
+  width: 200px;
+  background-color: white;
+  border-radius: 15px;
+  float: left;
+  margin: 0px 10px 10px 0px;
+  height: 300px;
+  text-align: center;
+}
+
+.project-tile img {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.project-tile li {
+  text-align: left;
+}
+
+.project-tile p.repo-link {
+  position: absolute;
+  bottom: 0px;
+  left: 80px;
+}
+
+article.project-show {
+  position: relative;
+  background-color:  white;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-width: 400px;
+}
+
+.project-show img {
+  width: 100%;
+}
+
+.project-show section {
+  position: relative;
+  padding: 20px;
+}
