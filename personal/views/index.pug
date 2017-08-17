@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to your #{title} page.
+
+	.body
+		h1 Projects
+		ul
+			each project in projects
+				h3 Name:
+				li= project.name
+				h3 Link:
+				a(href=`/projects/${project.name}`) #{project.name}
+				| 
+				h3 Technology used:
+				p #{project.technology}
+				h3 Github:
+				a(href=`${project.github}`) Here.
+				br
