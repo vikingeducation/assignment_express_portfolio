@@ -1,0 +1,29 @@
+
+<h1>{{project.name}}</h1>
+<div class="landingpage">
+
+  <div class="tools">
+    <h2>{{project.name}} uses these tools:</h2>
+    <ul>
+      {{#each project.technologies as |tool|}}
+      <li>{{tool}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="gitHub">
+    <h2>Git Hub repository</h2>
+    <p>{{project.gitHub}}</p>
+  </div>
+
+  <div class="pics">
+    <h2>some pics</h2>
+
+      <img  src="{{project.img1}}">
+
+
+      <img src="{{project.img2}}">
+
+  </div>
+
+</div>
