@@ -1,0 +1,21 @@
+<h2>{{project.name}}</h2>
+
+<div id="site-wrapper">
+	<div id="project-wrapper">
+		<div>
+		  <img id="project-image" src="../{{project.img}}">
+		</div>
+		
+		<div>
+		  <h3>Tech Used</h3>
+		  <ul>
+		    {{#each project.tech as |tech|}}
+		      <li>{{tech}}</li>
+		    {{/each}}
+		  </ul>
+		</div>
+
+		<a href={{project.git}}><h4>Check it out on Github!</h4></a>
+		<a href={{project.site}}><h4>Check out the site!</h4></a>
+	</div>
+</div>
