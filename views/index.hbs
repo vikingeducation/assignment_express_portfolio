@@ -1,0 +1,29 @@
+<h1>Jared Gebel</h1>
+<h2>Projects</h2>
+
+{{#each projects as |project|}}
+  <div class="project">
+    <div class="project-name">
+      <a href="{{project.path}}">
+        <h3>{{project.name}}</h3>
+      </a>
+    </div>
+
+    <div class="description">
+      <p>{{project.description}}</p>
+    </div>
+
+    <div class="langs">
+        <div class="lang">
+          <p>{{lang}}</p>
+        </div>
+    </div>
+
+    <div class="repo">
+      <a href="{{project.repoSrc}}">
+        Github Repository
+      </a>
+    </div>
+    <br>
+  </div>
+{{/each}}
