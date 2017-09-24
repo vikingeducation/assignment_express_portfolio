@@ -1,0 +1,23 @@
+{
+  "name": "assignment_express_portfolio",
+  "version": "1.0.0",
+  "description": "Github portfolio created using express, handlebars and node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dascormallorn/assignment_express_portfolio.git"
+  },
+  "author": "Dennis C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dascormallorn/assignment_express_portfolio/issues"
+  },
+  "homepage": "https://github.com/dascormallorn/assignment_express_portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0"
+  }
+}
