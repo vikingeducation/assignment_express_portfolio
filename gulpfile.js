@@ -1,0 +1,28 @@
+const gulp = require('gulp');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const sass = require('gulp-ruby-sass');
+
+gulp.task('html', function() {
+  return gulp.src('views/*.hbs')
+    .pipe(pug())
+    .pipe(gulp.dest('build/html'))
+});
+
+gulp.task('sass', function() {
+  sass('public/stylesheets/*.scss')
+    .on('error', sass.logError)
+    .pipe(gulp.dest('dist'))
+});
+
+gulp.task('babel', function() {
+  gulp.src('**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist'))
+});
+
+gulp.task('default', [ 'html', 'sass' ]);

@@ -1,0 +1,14 @@
+<h1>{{project.displayName}}</h1>
+
+<h3>Screenshot:</h3>
+<img id="photo" src="{{project.imageUrl}}" alt="Project Screenshot"/>
+
+<h3><a href="{{project.gitHubUrl}}">Project Repo</a></h3>
+<h3>Technologies used:</h3>
+<div class="project-technologies">
+  <ul>
+    {{#each project.technologies as |technology|}}
+        <li>{{technology}}</li>
+    {{/each}}
+  </ul>
+</div>
