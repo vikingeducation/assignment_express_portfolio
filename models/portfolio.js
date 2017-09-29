@@ -40,7 +40,7 @@ let projects = [
 	}),
 ];
 
-console.log(projects);
+//console.log(projects);
 
 module.exports = {
   Project,
