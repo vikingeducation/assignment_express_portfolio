@@ -1,28 +1,41 @@
-<h1>Steven Zarrella: Portfolio</h1>
+<title>Steven Zarrella | Portfolio</title>
 
-{{#each projects as |project|}}
-  <div class="project">
-    <div class="project-name">
-      <a href="/projects/{{project.projectName}}">
-         {{project.projectName}}
-       </a>
-    </div>
+<section class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>My name is Steve Zarrella, and I am a fullstack web developer specializing in Javascript & Node.js. Below are some of my projects-- some basic, some a bit more complex. I think they show a nice variety of technologies that I can work with. This site itself is a work in progress (it always will be!), but thanks for taking the time to have a look!</p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="/resume">My r&#233;sum&#233; &#187;</a>
+        </p>
+      </div><!--/jumbotron container-->
+    </section><!--/jumbotron-->
 
-    <div class="project-image">
-    	<img src="{project.imageLink}}"></img>
-    </div>
-
-    <div class="project-technologies">
-      {{#each project.technologies as |technologies|}}
-        <div class="project-technology">
-          {{technologies}}
-        </div>
+    <section class="container">
+      {{#each projects as |project|}}
+        <article class="col-md-4 project">
+          <h2>{{project.projectName}}</h2>
+          <div class="project-image-div">
+            <img class="img-fluid project-image" src="{{project.imageLink}}"></img>
+          </div>
+          <p><div class="project-technologies">
+            <h4>Technologies used:</h4>
+            {{#each project.technologies as |technologies|}}
+              <div class="project-technology">
+                {{technologies}}
+              </div>
+            {{/each}}
+          </div></p>
+          <p>
+            <a class="btn btn-default" href="/projects/{{project.projectName}}">View project &#187;</a>
+          </p>
+        </article>
+        
       {{/each}}
-    </div>
+      
+    </section>
 
-    <div class="github-link">
-    	{{project.gitLink}}
-    </div>
-  </div>
-  <br>
-{{/each}}
+    <footer class="container">
+      <hr>
+      <p>&#169; 2017 Steven Zarrella</p>
+    </footer>
+

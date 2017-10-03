@@ -4,14 +4,14 @@ var projects = require('../models/portfolio').projects;
 var Project = require('../models/portfolio').Project;
 
 function findProject(projectname) {
-	return projects.find(function(project) {
-	  return projectname == project.projectName;
+	return projects.find(function(item) {
+	  return item.projectName == projectname;
 	});
 };
 
 router.get('/:projectname', function(req, res, next) {
-    var projectname = findProject(req.params.projectname)
-    res.render('project', { project: projectname })
+    var project = findProject(req.params.projectname);
+    res.render('project', { project: project })
 });
 
 module.exports = router;
