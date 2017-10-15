@@ -1,0 +1,95 @@
+<div class="container">
+    <header class="tm-site-header">
+        <h1 class="tm-site-name">{{title}}</h1>
+
+        <nav class="navbar navbar-expand-md tm-main-nav-container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tmMainNav" aria-controls="tmMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse tm-main-nav" id="tmMainNav">
+                <ul class="nav nav-fill tm-main-nav-ul">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li> -->
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="tm-main-content">
+        <section class="tm-margin-b-l">
+            <header>
+                <h2 class="tm-main-title">Welcome to My Projects Page</h2>
+            </header>
+
+            <div class="tm-gallery">
+                <div class="row">
+                  {{#each projects as |project|}}
+                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                        <a href="/project/{{project.name}}">
+                            <div class="tm-gallery-item-overlay">
+                                <img src="{{project.image}}" alt="Image" class="img-fluid tm-img-center fixed-ratio-resize">
+                                <p class="tm-figcaption">{{project.name}}</p>
+                            </div>
+
+                              <h4>Technologies used: </h4>
+                              {{#each project.technologies as |tech|}}
+                                <span>{{tech}}</span>
+                              {{/each}}
+                        </a>
+                    </figure>
+                  {{/each}}
+
+                </div>
+            </div>
+
+            <!-- <nav class="tm-gallery-nav">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">4</a></li>
+                </ul>
+            </nav> -->
+        </section>
+
+        <section class="media tm-highlight tm-highlight-w-icon">
+
+            <div class="tm-highlight-icon">
+                <i class="fa tm-fa-6x fa-meetup"></i>
+            </div>
+
+            <div class="media-body">
+                <header>
+                    <h2>Need Help?</h2>
+                </header>
+                <p class="tm-margin-b">Curabitur magna tellus, condimentum vitae consectetur id, elementum sit amet erat. Phasellus arcu leo, sagittis fringilla nisi et, pulvinar vestibulum mi. Maecenas mollis ullamcorper est at dignissim.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        Copyright &copy; <span class="tm-current-year">2018</span>
+
+        <a href="http://www.darekbiskupski.com" target="_parent">Darek Biskupski</a>
+    </footer>
+</div>
+
+<!-- load JS files -->
+<script src="javascripts/jquery-1.11.3.min.js"></script>         <!-- jQuery (https://jquery.com/download/) -->
+<script src="javascripts/popper.min.js"></script>                <!-- Popper (https://popper.js.org/) -->
+<script src="javascripts/bootstrap.min.js"></script>             <!-- Bootstrap (https://getbootstrap.com/) -->
+<!-- <script>
+
+    $(document).ready(function(){
+
+        // Update the current year in copyright
+        $('.tm-current-year').text(new Date().getFullYear());
+
+    });
+
+</script> -->

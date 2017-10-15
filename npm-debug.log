@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/Visiona/.nvm/versions/node/v5.9.1/bin/node',
+1 verbose cli   '/Users/Visiona/.nvm/versions/node/v5.9.1/bin/npm',
+1 verbose cli   'start' ]
+2 info using npm@3.7.3
+3 info using node@v5.9.1
+4 verbose config Skipping project config: /Users/Visiona/.npmrc. (matches userconfig)
+5 verbose stack Error: missing script: start
+5 verbose stack     at run (/Users/Visiona/.nvm/versions/node/v5.9.1/lib/node_modules/npm/lib/run-script.js:147:19)
+5 verbose stack     at /Users/Visiona/.nvm/versions/node/v5.9.1/lib/node_modules/npm/lib/run-script.js:57:5
+5 verbose stack     at /Users/Visiona/.nvm/versions/node/v5.9.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:345:5
+5 verbose stack     at checkBinReferences_ (/Users/Visiona/.nvm/versions/node/v5.9.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:309:45)
+5 verbose stack     at final (/Users/Visiona/.nvm/versions/node/v5.9.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:343:3)
+5 verbose stack     at then (/Users/Visiona/.nvm/versions/node/v5.9.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
+5 verbose stack     at ReadFileContext.<anonymous> (/Users/Visiona/.nvm/versions/node/v5.9.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:284:20)
+5 verbose stack     at ReadFileContext.callback (/Users/Visiona/.nvm/versions/node/v5.9.1/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16)
+5 verbose stack     at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:324:13)
+6 verbose cwd /Users/Visiona/Documents/Viking_School/JavaScript/assignment_express_portfolio
+7 error Darwin 15.6.0
+8 error argv "/Users/Visiona/.nvm/versions/node/v5.9.1/bin/node" "/Users/Visiona/.nvm/versions/node/v5.9.1/bin/npm" "start"
+9 error node v5.9.1
+10 error npm  v3.7.3
+11 error missing script: start
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
