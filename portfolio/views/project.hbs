@@ -1,0 +1,10 @@
+<h1 class="whitening-font">{{project.name}}</h1>
+
+
+<img src="{{project.image}}" alt="Image" class="img-fluid tm-img-center">
+<h4 class="whitening-font">Technologies used: </h4>
+{{#each project.technologies as |tech|}}
+  <span class="whitening-font">{{tech}}</span>
+{{/each}}
+<p class="tm-figcaption">{{project.name}}</p>
+<h3><a href="{{project.url}}">Github Repository</a></h3>
