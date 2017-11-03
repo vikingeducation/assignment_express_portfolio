@@ -1,0 +1,13 @@
+<h1>Projects from Viking Code School</h1>
+
+{{#each projects as |project|}}
+
+<!-- not sure why images arent appearing?? -->
+  <div class="project">
+    <img src="{{project.image}}" />
+    <p><a href="/projects/{{project.name}}">{{project.name}}</a> </p>
+    <p>Technologies Utilized: {{project.tech}}</p>
+    <p><a href="{{link}}">Github Repo</a></p>
+  </div>
+
+{{/each}}
