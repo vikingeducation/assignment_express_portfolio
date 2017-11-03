@@ -1,0 +1,26 @@
+{
+  "name": "assignment_express_portfolio",
+  "version": "1.0.0",
+  "description": "Use your newfound Express abilities to fashion yourself a portfolio of your recent code accomplishments.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikingeducation/assignment_express_portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikingeducation/assignment_express_portfolio/issues"
+  },
+  "homepage": "https://github.com/vikingeducation/assignment_express_portfolio#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "hbs": "^4.0.1"
+  },
+  "devDependencies": {}
+}
