@@ -3,3 +3,41 @@
 
 
 }
+
+body{
+    background-color: whitesmoke;
+    padding: 20px;
+    font-family: Arial; 
+}
+
+.container {
+  max-width: 900px;
+    margin: auto;
+    
+    
+}
+
+.column {
+    float: left;
+    max-width: 100%;
+    
+}
+
+.row:after {
+   content: "";
+    display: table;
+    clear: both;
+    
+}
+
+@media (max-width:800px) {
+    .column {
+        width: 50%
+    }
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
