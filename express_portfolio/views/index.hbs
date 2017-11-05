@@ -1,0 +1,37 @@
+<h1>My Previous Projects</h1>
+
+{{#each projects as |project|}}
+  <div class="project">
+    <div class="project-name">
+      <a href="/projects/{{project.name}}">
+        {{project.name}}
+      </a>
+    </div>
+
+
+    <div class="project-techs">
+      {{#each project.techs as |tech|}}
+      <div class="project-tech">
+        {{tech}}
+      </div>
+      {{/each}}
+    </div>
+
+
+
+  <div class="project-link">
+    <a href={{project.link}}>
+      Github page
+    </a>
+  </div>
+
+
+  <div class="project-imgs">
+  {{#each project.imgs as |img|}}
+    <div class="project-img">
+      <img src={{img}}>
+    </div>
+    {{/each}}
+  </div>
+</div>
+{{/each}}
