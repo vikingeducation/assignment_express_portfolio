@@ -1,0 +1,40 @@
+*{
+    
+    box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+  font: 5 "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+h1{
+    margin-top: -20px;
+}
+a {
+  color: #00B7FF;
+}
+
+img {
+    max-width: 75%;
+    max-height: 50%;
+    padding-right: 25px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 0px;
+    padding: 0px;
+    
+}
+
+.column {
+     border: 2px solid black;
+}
+
+.row {
+    float: left;
+    width: 400px;
+    height: 300px;
+    padding: 10px
+}
+

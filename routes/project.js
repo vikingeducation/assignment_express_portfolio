@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {Project, projects} = require('../projects')
+const {Project, projects} = require('../models/projects')
 
 function findProject(name){
     return projects.find(function(project) {
@@ -9,8 +9,8 @@ function findProject(name){
     })
 }
 router.get('/:name', function(req, res, next){
-    var project = findGod(req.params.name)
-    res.render('proj', {project: project})
+    var project = findProject(req.params.name)
+    res.render('projects', {project})
     
 } );
 
