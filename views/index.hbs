@@ -1,0 +1,29 @@
+<header>
+  <h1>Johann Baptista | Software Engineer</h1>
+  <address>
+    <p><a href = "mailto:baptistajohann@gmail.com">baptistajohann@gmail.com</a></p>
+    <hr>
+  </address>
+</header>
+
+<h2>Projects</h2>
+
+{{#each projects as |project|}}
+  <div class="project">
+    <div class="project-name">
+      <a href="/projects/{{project.name}}">
+         {{project.title}}
+       </a>
+    </div>
+    <br>
+    <div class="project-technologies">
+      {{#each project.technologies as |technology|}}
+        <div class="project-technology">
+          {{technology}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <br>
+{{/each}}
+
