@@ -1,0 +1,8 @@
+<a href = "http://localhost:3000">
+	<img src= "/images/WEB.png"/>
+<a>
+<ul>
+{{#each projects as |item|}}
+	<li class = 'inline'><a href=users/{{item.link}}>{{item.title}}</a></li>
+{{/each}}
+</ul>
