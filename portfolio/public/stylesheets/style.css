@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #cdf7e7;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.inline{
+	display: inline-block;
+	list-style-type: none;
+	font-size: 30px;
+	margin: 1%;
+	text-decoration: none;
+}
+
+img{
+	width: 100px;
+	height: 100px;
+}
+.portfolio-image{
+	width: 400px;
+	height: initial;
+}

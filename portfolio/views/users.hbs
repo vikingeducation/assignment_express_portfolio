@@ -1,0 +1,25 @@
+
+<a href = "http://localhost:3000">
+	<img src= "/images/WEB.png"/>
+<a>
+<ul>
+{{#each object2 as |item|}}
+	<li class = 'inline'><a href={{item.link}}>{{item.title}}</a></li>
+{{/each}}
+</ul>
+
+<h1>{{object.title}}</h1>
+<ul>
+	<li>{{object.type}}</li>
+	<li>
+		<ul>
+			{{#each object.technologies as |thing|}}
+				<li>{{thing}}</li>
+			{{/each}}
+		</ul>
+	</li>
+</ul>
+
+{{#each object.images as |thing|}}
+	<img class = "portfolio-image" src = '{{thing}}' />
+{{/each}}
