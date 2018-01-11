@@ -1,4 +1,29 @@
 <% include partials/header %>
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
+
+<h1>Welcome to my Personal Portfolio</h1>
+<h2>Projects</h2>
+
+<% projects.forEach( project => { %>
+  <div class="project">
+
+    <div class="project-name">
+      <a href="/projects/<%= project.param %>">
+        <h3>
+        <%= project.name %>
+        </h3>
+      </a>
+    </div>
+
+    <div class="project-tech">
+      <h4>Tech Stack</h4>
+      <% project.tech.forEach( tech => { %> 
+        <div class="tech">
+          <%= tech  %>
+        </div>
+      <% }); %> 
+    </div>
+
+  </div>
+<% }); %>
+
 <% include partials/footer %>
