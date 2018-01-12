@@ -1,0 +1,27 @@
+<% include partials/header %>
+  <header>
+    <h1><%= project.name %></h1>
+  </header>
+
+  <section class="project">
+
+    <div class="project-img">
+      <img src="../<%= project.img %>" alt="project image">
+    </div>
+
+    <div class="project-tech">
+      <h4>Technologies:</h4>
+      <ul class="tech-stack">
+      <% project.tech.forEach( tech => { %> 
+        <li class="tech">
+          <%= tech  %>
+        </li>
+      <% }); %> 
+      </ul>
+    </div>
+
+    <a href="<%= project.url %>">Github</a>
+
+  </section>
+
+<% include partials/footer %>

@@ -1,29 +1,26 @@
 <% include partials/header %>
 
-<h1>Welcome to my Personal Portfolio</h1>
-<h2>Projects</h2>
+  <header>
+    <h1>Welcome to my Personal Portfolio</h1>
+    <h2>Projects</h2>
+  </header>
 
 <% projects.forEach( project => { %>
-  <div class="project">
+  <section class="project">
 
     <div class="project-name">
       <a href="/projects/<%= project.param %>">
         <h3>
         <%= project.name %>
         </h3>
+
+        <div class="project-img">
+          <img src="<%= project.img %>" alt="project image">
+        </div>
       </a>
     </div>
 
-    <div class="project-tech">
-      <h4>Tech Stack</h4>
-      <% project.tech.forEach( tech => { %> 
-        <div class="tech">
-          <%= tech  %>
-        </div>
-      <% }); %> 
-    </div>
-
-  </div>
+  </section>
 <% }); %>
 
 <% include partials/footer %>
