@@ -1,0 +1,121 @@
+@import 'reset';
+
+// Layout
+.container {
+  display: grid;
+  grid-template-columns: 1fr 60% 1fr;
+
+  header,
+  .project {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+
+  header,
+  .project {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  hr {
+    display: block;
+    border: 2px double black;
+    margin-top: -0.5rem;
+    width: 90%;
+  }
+}
+
+.project {
+
+  a {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  margin-bottom: 1rem;
+}
+
+.project-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  img {
+    border-radius: 1rem;
+    object-fit: cover;
+    width: 80%;
+    height: auto;
+  }
+}
+
+.project-tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ul {
+    margin: -0.5rem 0 2rem -3rem;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+// Typography
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Icons
+.github-icon {
+  height: 3rem;
+  width: 3rem;
+}
+
+// Button
+.back-btn {
+  border-radius: 5px;
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.1);
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 0.3rem 0.5rem;
+  height: auto;
+  width: 5rem;
+}

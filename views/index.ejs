@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+<div class="container">
+  <header>
+    <h1>Welcome to my Personal Portfolio</h1>
+    <hr>
+    <h2>Projects</h2>
+  </header>
+
+<% projects.forEach( project => { %>
+  <section class="project">
+
+    <div class="project-name">
+      <a href="/projects/<%= project.param %>">
+        <h3>
+        <%= project.name %>
+        </h3>
+
+        <div class="project-img">
+          <img src="<%= project.img %>" alt="project image">
+        </div>
+      </a>
+    </div>
+
+  </section>
+<% }); %>
+</div>
+
+<% include partials/footer %>
