@@ -1,9 +1,10 @@
-# assignment_express_portfolio
-Use your newfound Express abilities to fashion yourself a portfolio of your recent code accomplishments.
-
+# node_express_router_portfolio
 
 Gregory Alford
 
-View my project at:
+This is s practice portfolio for working with multiple views and express router from my days of learning express. Sadly it is really outdated so I am no longer hosting it. It is only practice anyway.
 
-https://shrouded-savannah-71876.herokuapp.com/
+To Run:
+```
+npm i && npm run start
+```
