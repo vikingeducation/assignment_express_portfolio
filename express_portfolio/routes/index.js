@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var pokemon = require('../models/pokemon').pokemon;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -7,3 +8,13 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+
+
++
++/* GET home page. */
++router.get('/', function(req, res, next) {
++  res.render('index', { projects: projects });
++});
++
++module.exports = router;
