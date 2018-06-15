@@ -1,2 +1,17 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+{{#each monsters as |pokemon|}}
+  <section class="pokemon">
+
+    <div class="pokemon-name">
+      <a href="/pokemon/{{pokemon.name}}">
+        <h3>{{pokemon.name}}</h3>
+        <div class="pokemon-img">
+          <img src="{{pokemon.img}}" alt="{{pokemon.name}} image">
+        </div>
+      </a>
+    </div>
+
+  </section>
+  {{/each}}
