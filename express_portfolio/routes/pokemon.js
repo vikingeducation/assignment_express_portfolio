@@ -1,18 +1,15 @@
 var express = require('express');
 var router = express.Router();
-var pokemon = require('../models/pokemon').pokemon;
+var {Pokemon, monsters} = require('../models/pokemon')
 
-function findPokemon ( name ) {
-  return pokemon.find( pokemon => {
-    return name == pokemon.name
-  })
+const findPokemon = (name) => {
+  return monsters.find(monster => name == monster.name)
 }
 
-/* GET users listing. */
-router.get('/:pokemon', function(req, res, next) {
-  // res.send('respond with a resource');
-  var pokemon = findPokemon(req.name.pokemon)
-  +  res.render('pokemon', { pokemon: pokemon })
+/* GET home page. */
+router.get('/:name', function(req, res, next) {
+  const monster = findPokemon(req.params.name)
+  res.render('pokemon', { monster: monster })
 });
 
 module.exports = router;

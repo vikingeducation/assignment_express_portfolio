@@ -14,6 +14,8 @@ var monsters = [
   new Pokemon("Gyarados", "130", "https://img.pokemondb.net/artwork/gyarados.jpg", "Water/Flying", "	Atrocious Pokémon")
 ]
 
+// console.log("monsters", monsters);
+
 module.exports = {
   Pokemon,
   monsters
