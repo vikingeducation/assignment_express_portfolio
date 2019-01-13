@@ -1,0 +1,25 @@
+<h1>Projects</h1>
+<hr><hr>
+
+
+
+{{#each projects as |project|}}
+  <h2>
+    <a href="/projects/{{project.name}}">
+    {{project.name}}
+    </a>
+  </h2>
+
+  <h3>Technologies</h3>
+    <ol>
+      {{#each project.techs as |tech|}}
+        <li> {{tech}} </li>
+      {{/each}}
+    </ol>
+
+    <h3>{{project.link}}</h3>
+    <img src={{project.img}} alt="">
+
+    <hr>
+
+{{/each}}
